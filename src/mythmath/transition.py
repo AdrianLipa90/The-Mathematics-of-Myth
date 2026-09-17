@@ -155,3 +155,56 @@ def interval_contains(value: float, lower: float, upper: float) -> bool:
         raise ValueError("lower must not exceed upper")
     return lower <= value <= upper
 
+DIVINE_DAY_THRESHOLDS: tuple[int, ...] = (10, 20, 30, 40, 50, 60)
+MESOPOTAMIAN_DIVINE_NUMERALS: dict[int, str] = {
+    10: "Adad",
+    15: "Ishtar",  # counterexample to an exclusively decadal pantheon
+    20: "Shamash",
+    30: "Sin",
+    40: "Ea",
+    50: "Enlil",
+    60: "Anu",
+}
+
+
+def divine_day_threshold(day: int) -> int:
+    """End threshold for candidate creation day 1..6, in abstract phase units."""
+    if not isinstance(day, int) or isinstance(day, bool) or not 1 <= day <= 6:
+        raise ValueError("day must be an integer from 1 through 6")
+    return 10 * day
+
+
+def sexagesimal_phase(value: float) -> float:
+    """Phase modulo 60; mathematical helper, not a historical calendar claim."""
+    import math
+    if not math.isfinite(value) or value < 0:
+        raise ValueError("value must be finite and nonnegative")
+    return value % 60.0
+
+
+def creation_calendar_state(winding: float) -> tuple[str, int]:
+    """Fail-closed state of the candidate 6-day calendar on 0 <= winding <= 60.
+
+    0 <= W < 60: six active 10-unit sectors.
+    W == 60: day 7 / post-closure boundary state.
+    W > 60 is intentionally undefined until a reset or Sabbath-duration rule
+    has independent evidence.
+    """
+    import math
+    if not math.isfinite(winding) or winding < 0:
+        raise ValueError("winding must be finite and nonnegative")
+    if winding > 60:
+        raise ValueError("post-closure continuation is not yet defined")
+    if winding == 60:
+        return ("POST_CLOSURE", 7)
+    return ("ACTIVE", int(winding // 10) + 1)
+
+
+def schematic_year(months: int = 12, days_per_month: int = 30) -> int:
+    """Return a schematic year length for positive integral month parameters."""
+    if not isinstance(months, int) or isinstance(months, bool) or months <= 0:
+        raise ValueError("months must be a positive integer")
+    if not isinstance(days_per_month, int) or isinstance(days_per_month, bool) or days_per_month <= 0:
+        raise ValueError("days_per_month must be a positive integer")
+    return months * days_per_month
+

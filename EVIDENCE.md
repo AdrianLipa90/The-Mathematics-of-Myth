@@ -56,3 +56,15 @@ The statistical independence of traditions is a separate historical question and
 - **Babylonian mathematical astronomy**: positive control showing historical capability to quantify periodic celestial phenomena.
 
 These controls make the hypothesis harder to pass: a mythic relation must preserve more than a physically common numeral.
+## Divine-calendar candidate (10-60-360)
+
+- ORACC documents numerical divine spellings `d10` Adad, `20` Shamash, `30` Sin, `d40` Ea/Enki, `d50` Enlil, and `d60` Anu.
+- This exact decadal ladder is historically attested as divine-number orthography, but it is **not itself an attested calendar**.
+- Counterexample / anti-cherry-picking guard: Ishtar is also written `d15`; the divine-number system is not exclusively multiples of ten.
+- Friberg (2019) documents the sexagesimal counting-unit progression `1, 10, 1x60, 10x60, ...`; treating `60 mod 60 = 0` is our modern phase formalism, not an ancient theological zero claim.
+- Genesis 1:31 closes day six with the evening-morning formula; Genesis 2:2-3 marks day seven by completion/cessation and does not supply another evening-morning closure.
+- Ben-Dov (2021) argues that ancient Judah used schematic 30-day months / a 360-day year in administrative and priestly literary reckoning; the flood account's 150 days correspond to five schematic months.
+- Egypt independently used three 10-day weeks per 30-day month and a 360-day civil year plus five epagomenal days.
+- Later Indian cosmic-time traditions provide an independent control where divine-year arithmetic uses a 360-unit scaling.
+
+The current model therefore treats `10 -> 60 -> 360` as a candidate hierarchy with explicit provenance boundaries. It does not yet identify one abstract phase unit with a Galactic orbit or any other physical period.

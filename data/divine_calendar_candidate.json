@@ -1,0 +1,133 @@
+{
+  "schema": "mythmath.divine-calendar-candidate/v0.1",
+  "status": "CANDIDATE",
+  "epistemic_rule": "Attested divine numerals and calendars are evidence of historical number systems, not evidence that Genesis encodes this exact calendar.",
+  "phase_unit": "abstract winding/phase unit; physical identification not fixed",
+  "creation_days": [
+    {
+      "day": 1,
+      "interval": [
+        0,
+        10
+      ],
+      "endpoint": 10
+    },
+    {
+      "day": 2,
+      "interval": [
+        10,
+        20
+      ],
+      "endpoint": 20
+    },
+    {
+      "day": 3,
+      "interval": [
+        20,
+        30
+      ],
+      "endpoint": 30
+    },
+    {
+      "day": 4,
+      "interval": [
+        30,
+        40
+      ],
+      "endpoint": 40
+    },
+    {
+      "day": 5,
+      "interval": [
+        40,
+        50
+      ],
+      "endpoint": 50
+    },
+    {
+      "day": 6,
+      "interval": [
+        50,
+        60
+      ],
+      "endpoint": 60
+    }
+  ],
+  "closure": {
+    "winding": 60,
+    "state": 7,
+    "label": "POST_CLOSURE",
+    "continuation_after_60": "UNDEFINED"
+  },
+  "mesopotamian_divine_numerals": [
+    {
+      "number": 10,
+      "deity": "Adad/Ishkur",
+      "source": "ORACC AMGG Ishkur/Adad",
+      "url": "https://oracc.museum.upenn.edu/amgg/listofdeities/ikur/"
+    },
+    {
+      "number": 15,
+      "deity": "Ishtar",
+      "role": "counterexample_non_decadal",
+      "source": "ORACC AMGG Inana/Ishtar",
+      "url": "https://oracc.museum.upenn.edu/amgg/Listofdeities/InanaIshtar/"
+    },
+    {
+      "number": 20,
+      "deity": "Shamash/Utu",
+      "source": "ORACC AMGG Utu/Shamash",
+      "url": "https://oracc.museum.upenn.edu/amgg/Listofdeities/UtuShamash/index.html"
+    },
+    {
+      "number": 30,
+      "deity": "Sin/Nanna",
+      "source": "ORACC AMGG Nanna/Suen/Sin",
+      "url": "https://oracc.museum.upenn.edu/amgg/listofdeities/nannasuen/"
+    },
+    {
+      "number": 40,
+      "deity": "Ea/Enki",
+      "source": "ORACC AMGG Enki/Ea",
+      "url": "https://oracc.museum.upenn.edu/amgg/listofdeities/enki/"
+    },
+    {
+      "number": 50,
+      "deity": "Enlil",
+      "source": "ORACC AMGG Enlil",
+      "url": "https://oracc.museum.upenn.edu/amgg/listofdeities/enlil/"
+    },
+    {
+      "number": 60,
+      "deity": "Anu/An",
+      "source": "ORACC AMGG An/Anu",
+      "url": "https://oracc.museum.upenn.edu/amgg/listofdeities/an/"
+    }
+  ],
+  "calendar_controls": [
+    {
+      "tradition": "Egypt",
+      "structure": "3 x 10-day weeks per 30-day month; 12 x 30 = 360 plus 5 epagomenal days",
+      "source": "Met Museum, Telling Time in Ancient Egypt",
+      "url": "https://www.metmuseum.org/essays/telling-time-in-ancient-egypt"
+    },
+    {
+      "tradition": "Ancient Judah / priestly Genesis",
+      "structure": "schematic 30-day months and 360-day year; flood interval 5 months = 150 days",
+      "source": "Jonathan Ben-Dov, Harvard Theological Review 114.4 (2021)",
+      "url": "https://www.cambridge.org/core/journals/harvard-theological-review/article/360day-administrative-year-in-ancient-israel-judahite-portable-calendars-and-the-flood-account/8F5696178CD94A096EA16DC811FC787D"
+    },
+    {
+      "tradition": "Indian cosmic chronology",
+      "structure": "divine-year systems use 360-day/year scaling in later cosmological texts",
+      "source": "Bhagavata Purana 3.11 tradition",
+      "url": "https://vedabase.io/en/library/sb/3/11/19/"
+    }
+  ],
+  "nulls_and_caveats": [
+    "The divine numeral series is not exclusively decadal: Ishtar=15 is attested.",
+    "A numeral used as a divine logogram is not automatically a unit of time.",
+    "60 mod 60 = 0 is a modern phase representation of radix closure, not evidence for an ancient theological zero.",
+    "The physical oscillator underlying one abstract phase unit remains unresolved."
+  ]
+}

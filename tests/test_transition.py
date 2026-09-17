@@ -15,6 +15,12 @@ from mythmath.transition import (
     post_closure_state,
     phase_fraction_period,
     interval_contains,
+    DIVINE_DAY_THRESHOLDS,
+    MESOPOTAMIAN_DIVINE_NUMERALS,
+    creation_calendar_state,
+    divine_day_threshold,
+    schematic_year,
+    sexagesimal_phase,
 )
 
 
@@ -140,3 +146,56 @@ def test_astronomical_helpers_fail_closed():
         phase_fraction_period(29.5, 0)
     with pytest.raises(ValueError):
         interval_contains(3.0, 4.5, 2.5)
+
+
+def test_divine_calendar_decadal_thresholds_are_frozen():
+    assert DIVINE_DAY_THRESHOLDS == (10, 20, 30, 40, 50, 60)
+    assert tuple(divine_day_threshold(i) for i in range(1, 7)) == DIVINE_DAY_THRESHOLDS
+
+
+def test_mesopotamian_decadal_ladder_is_attested_but_not_exhaustive():
+    expected = {
+        10: "Adad",
+        20: "Shamash",
+        30: "Sin",
+        40: "Ea",
+        50: "Enlil",
+        60: "Anu",
+    }
+    assert {k: MESOPOTAMIAN_DIVINE_NUMERALS[k] for k in DIVINE_DAY_THRESHOLDS} == expected
+    # Ishtar=15 is an explicit guard against claiming the pantheon consists
+    # only of the six decadal values.
+    assert MESOPOTAMIAN_DIVINE_NUMERALS[15] == "Ishtar"
+    assert 15 not in DIVINE_DAY_THRESHOLDS
+
+
+def test_sixty_is_boundary_not_seventh_equal_sector():
+    assert creation_calendar_state(0) == ("ACTIVE", 1)
+    assert creation_calendar_state(9.999) == ("ACTIVE", 1)
+    assert creation_calendar_state(10) == ("ACTIVE", 2)
+    assert creation_calendar_state(59.999) == ("ACTIVE", 6)
+    assert creation_calendar_state(60) == ("POST_CLOSURE", 7)
+    assert sexagesimal_phase(60) == pytest.approx(0.0)
+
+
+def test_post_sixty_rule_is_deliberately_undefined():
+    with pytest.raises(ValueError):
+        creation_calendar_state(60.0001)
+    with pytest.raises(ValueError):
+        creation_calendar_state(70)
+
+
+def test_schematic_360_year_and_flood_five_month_interval():
+    assert schematic_year() == 360
+    assert 5 * 30 == 150
+    assert schematic_year() // 60 == 6
+
+
+def test_divine_calendar_helpers_fail_closed():
+    for bad in (0, 7, 1.5, True):
+        with pytest.raises(ValueError):
+            divine_day_threshold(bad)
+    for bad in (-1.0, float("inf"), float("nan")):
+        with pytest.raises(ValueError):
+            sexagesimal_phase(bad)
+
