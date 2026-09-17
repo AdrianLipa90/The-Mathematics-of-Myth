@@ -47,3 +47,12 @@ These links are research aids; a publication-grade bibliography should replace c
 4. No verified full `3|2|1->0` cross-cultural isomorphism is claimed.
 
 The statistical independence of traditions is a separate historical question and must not be inferred from formal similarity.
+
+## Astronomical null-model controls
+
+- **Lunar conjunction invisibility**: naked-eye invisibility can naturally span roughly 2.5--4.5 days. A three-day dark/liminal interval is therefore not, by itself, diagnostic of transmission or hidden coding.
+- **Quarter lunation**: 29.530588/4 = 7.382647 days. Seven days is nearby, but the project does not infer a lunar origin for the biblical week; historical scholarship disputes simple Babylonian-calendar derivations.
+- **Egyptian Coffin Texts 154--160**: positive control showing that an ancient religious text sequence can encode ordered lunar phases.
+- **Babylonian mathematical astronomy**: positive control showing historical capability to quantify periodic celestial phenomena.
+
+These controls make the hypothesis harder to pass: a mythic relation must preserve more than a physically common numeral.

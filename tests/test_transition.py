@@ -13,6 +13,8 @@ from mythmath.transition import (
     horizon,
     is_strict_descent,
     post_closure_state,
+    phase_fraction_period,
+    interval_contains,
 )
 
 
@@ -116,3 +118,25 @@ def test_matching_six_or_seven_counts_without_cessation_is_number_match_only():
     creation_variant = BoundarySchedule(active_steps=5, boundary_step=7, boundary_type="additional_creation")
     genesis = BoundarySchedule(active_steps=6, boundary_step=7, boundary_type="cessation")
     assert classify_boundary_schedule(genesis, creation_variant) is RelationClass.NUMBER_MATCH_ONLY
+
+
+def test_lunar_quarter_null_model():
+    # Mean synodic month in days; this is a null-model calculation, not a
+    # historical derivation of the seven-day week.
+    assert phase_fraction_period(29.530588, 4) == pytest.approx(7.382647)
+
+
+def test_three_days_lies_inside_naked_eye_lunar_invisibility_range():
+    # Literature reports an observational invisibility span of roughly
+    # 2.5--4.5 days; three days is therefore not by itself diagnostic of
+    # cultural transmission or a hidden universal operator.
+    assert interval_contains(3.0, 2.5, 4.5)
+
+
+def test_astronomical_helpers_fail_closed():
+    with pytest.raises(ValueError):
+        phase_fraction_period(0.0, 4)
+    with pytest.raises(ValueError):
+        phase_fraction_period(29.5, 0)
+    with pytest.raises(ValueError):
+        interval_contains(3.0, 4.5, 2.5)

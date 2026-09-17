@@ -134,3 +134,24 @@ def cycle_completion_time(phi0: float, omega: float) -> float:
     if omega == 0:
         raise ValueError("omega must be nonzero")
     return 2.0 * math.pi / abs(omega)
+
+def phase_fraction_period(period: float, divisions: int) -> float:
+    """Return one equal phase sector of a positive finite period."""
+    import math
+    if not math.isfinite(period) or period <= 0:
+        raise ValueError("period must be positive and finite")
+    if not isinstance(divisions, int) or divisions <= 0:
+        raise ValueError("divisions must be a positive integer")
+    return period / divisions
+
+
+def interval_contains(value: float, lower: float, upper: float) -> bool:
+    """Closed-interval test used by observational null models."""
+    import math
+    vals=(value, lower, upper)
+    if not all(math.isfinite(x) for x in vals):
+        raise ValueError("finite values required")
+    if lower > upper:
+        raise ValueError("lower must not exceed upper")
+    return lower <= value <= upper
+

@@ -25,6 +25,8 @@ The working interpretation is deliberately weak:
 
 These are hypotheses to test, not conclusions.
 
+Astronomical null-model status: a roughly three-day dark interval is physically natural for lunar conjunction, and seven days is close to a quarter lunation. These are controls against over-interpreting numerical matches, not evidence of a lunar origin.
+
 Current stress-test status: no full cross-cultural `3|2|1->0` isomorphism has been verified. Stronger projected relations have emerged for (i) a three-interval liminal threshold, and (ii) a six-to-seven active/cessation boundary. `data/relations.json` records the scope and downgrade conditions for each comparison.
 
 
@@ -47,6 +49,9 @@ This order follows the current GREMLIN candidate routing: `OWL` (primary-evidenc
 - `src/mythmath/transition.py` — executable definitions.
 - `tests/test_transition.py` — falsification-oriented unit tests.
 - `data/evidence.json` — provenance-controlled evidence registry.
+- `data/relations.json` — scoped relation classifications.
+- `data/astronomical_null_models.json` — physical null models and positive controls.
+- `paper/sections/astronomical_null_models.tex` — astronomy-vs-myth falsification layer.
 
 ## Epistemic rule
 
