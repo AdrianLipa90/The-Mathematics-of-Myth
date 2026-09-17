@@ -1,0 +1,69 @@
+{
+  "schema": "mythmath.cyclic_text_data/v1",
+  "source": {
+    "work": "1 Enoch",
+    "chapter": 72,
+    "translation_basis": "R. H. Charles text as reproduced by thebookofenoch.info",
+    "url": "https://schodde.thebookofenoch.info/",
+    "retrieved_utc": "2026-09-17",
+    "notes": "Verses 72:6-32 describe the successive solar portals and day/night parts."
+  },
+  "epistemic_layer": "TEXT",
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "east_portal": [
+    4,
+    5,
+    6,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    1,
+    2,
+    3
+  ],
+  "day_parts": [
+    10,
+    11,
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    7,
+    8,
+    9
+  ],
+  "night_parts": [
+    8,
+    7,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    11,
+    10,
+    9
+  ],
+  "declared_year_days": 364
+}
