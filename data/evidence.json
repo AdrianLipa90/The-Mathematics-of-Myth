@@ -1,0 +1,56 @@
+[
+  {
+    "id": "GENESIS_2_2_3",
+    "tradition": "Hebrew Bible",
+    "source": "Genesis 2:2-3",
+    "claim": "Work is completed by the sixth day; the seventh is distinguished by cessation/rest.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["six_to_seven_closure"],
+    "does_not_establish": ["3|2|1 partition", "galactic period"]
+  },
+  {
+    "id": "HOSEA_6_2",
+    "tradition": "Hebrew Bible",
+    "source": "Hosea 6:2",
+    "claim": "After two days: revival; on the third day: raising/living.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["third_day_transition"],
+    "does_not_establish": ["universal threshold law"]
+  },
+  {
+    "id": "PAUL_1COR_15_4",
+    "tradition": "Early Christianity",
+    "source": "1 Corinthians 15:4",
+    "claim": "Raised on the third day.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["third_day_transition"],
+    "does_not_establish": ["cross-cultural isomorphism"]
+  },
+  {
+    "id": "PHILO_ALLEG_INT_I_2_5",
+    "tradition": "Hellenistic Judaism",
+    "source": "Philo, Allegorical Interpretation I.2-5",
+    "claim": "Six is treated as a perfect/order number rather than a literal duration; time is indexed by heavenly motion; seven is assigned a distinct post-six role.",
+    "tier": "ANCIENT_EXEGESIS",
+    "supports": ["six_as_order", "heavenly_motion_time", "six_to_seven_regime_change"],
+    "does_not_establish": ["galactic orbit identification"]
+  },
+  {
+    "id": "KOJIKI_AMATERASU_CAVE",
+    "tradition": "Japanese",
+    "source": "Kojiki, Amaterasu cave episode",
+    "claim": "Solar deity withdraws into a cave and later emerges, restoring light.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["darkness_to_light_transition"],
+    "does_not_establish": ["three_day_duration"]
+  },
+  {
+    "id": "WATAMASHI_BIWA_THREE_DAYS",
+    "tradition": "Japanese ritual / blind biwa",
+    "source": "Watamashi narrative reported in Saida Khalmirzaeva, Rites of Blind Biwa Players",
+    "claim": "A later ritual narrative contains three days and three nights of mikagura before the cave remains closed; subsequent musical/interpersonal action precedes emergence.",
+    "tier": "LATER_RITUAL",
+    "supports": ["three_interval_liminal_motif"],
+    "does_not_establish": ["Kojiki three-day duration", "exact Christian-Japanese isomorphism"]
+  }
+]

@@ -1,0 +1,173 @@
+\section{A Candidate Transition Operator for Mythic Narratives}
+\label{sec:transition-operator}
+
+\subsection{Epistemic scope}
+
+The purpose of this section is not to prove a theological proposition by
+numerical coincidence. We ask a narrower question: whether recurrent
+narrative motifs admit the same finite ordered structure after their
+culture-specific labels are removed. Numerical coincidence alone is
+therefore explicitly insufficient.
+
+Let a mythic motif be represented by a finite ordered event structure
+\[
+\mathcal{M}=(V,\prec,E,\lambda),
+\]
+where \(V\) is a finite state set, \(\prec\) is narrative order, \(E\) is the
+set of directed transitions, and \(\lambda:E\to\mathcal{T}\) assigns a typed
+transition such as \emph{withdrawal}, \emph{liminality}, \emph{emergence},
+\emph{cessation}, or \emph{renewal}.
+
+Two motifs are called structurally isomorphic only when a bijection
+\(f:V_1\to V_2\) preserves both order and transition type:
+\[
+u\prec_1 v \iff f(u)\prec_2 f(v),
+\qquad
+\lambda_1(u,v)=\lambda_2(f(u),f(v)).
+\]
+If transition order is preserved only after collapsing or inserting
+intermediate states, we use the weaker term \emph{order-homomorphism}.
+Shared semantic motifs without such a map are classified merely as
+\emph{analogy}. A repeated integer without preserved transition structure is
+classified as a \emph{number match only}.
+
+\subsection{The \texorpdfstring{\(123\mid45\mid6\to7\)}{123|45|6 to 7} partition}
+
+The working Genesis-derived candidate is
+\[
+123\mid45\mid6\longrightarrow7.
+\]
+Its active block lengths are
+\[
+\mathbf b=(3,2,1,0),
+\]
+where the final zero denotes that the seventh position is not being counted
+as an additional active creation block. Hence
+\[
+3+2+1=6=T_3,
+\qquad
+3>2>1>0.
+\]
+We define the candidate global horizon
+\[
+H:=6
+\]
+and the post-closure state
+\[
+S:=7.
+\]
+This notation is a model imposed for testing. Genesis 2:2--3 directly
+supports only the weaker statement that completion is associated with six
+and the seventh is distinguished by cessation/rest. It does \emph{not}
+itself attest the \(3\mid2\mid1\) partition.
+
+\subsection{Third-day transition operator}
+
+Hosea 6:2 and 1 Corinthians 15:4 independently place a raising/revival event
+at a ``third day.'' This motivates, but does not prove, a candidate local
+threshold operator
+\[
+\Theta_3:
+X_{\mathrm{liminal}}
+\longrightarrow
+X_{\mathrm{renewed}}.
+\]
+The empirical question is not whether the integer \(3\) occurs frequently,
+but whether independent narratives preserve the same ordered transition
+signature around that marker.
+
+\subsection{Six-to-seven regime change}
+
+Philo of Alexandria gives unusually explicit ancient support for treating
+the six/seven distinction structurally rather than as a simple clock
+duration. In \emph{Allegorical Interpretation} I.2--5 he rejects a naive
+six-day temporal reading, associates time with heavenly motion, treats six
+as a perfect/order number, and assigns seven a qualitatively different
+role. This is evidence for an ancient \emph{regime distinction}; it is not
+evidence that the intended clock was a galactic orbit.
+
+Accordingly we define only the candidate transition
+\[
+\mathcal C_6:
+\mathrm{ACTIVE}
+\longrightarrow
+\mathrm{CLOSED},
+\qquad
+\mathcal S_7:
+\mathrm{CLOSED}
+\longrightarrow
+\mathrm{POST\text{-}CLOSURE}.
+\]
+
+\subsection{Cycle-defined time}
+
+For a phase variable \(\phi_X(t)\), a cycle-defined ``day'' may be written
+abstractly as
+\[
+D_X=\inf\left\{
+t>0:
+\phi_X(t)-\phi_X(0)=0 \pmod{2\pi}
+\right\}.
+\]
+For uniform angular velocity \(\omega_X\neq0\),
+\[
+D_X=\frac{2\pi}{|\omega_X|}.
+\]
+This equation is a generic mathematical definition of recurrence. It does
+not by itself identify any ancient ``divine day'' with a particular modern
+astronomical period.
+
+\subsection{Amaterasu as a provenance stress test}
+
+The Amaterasu cave narrative is especially useful because it can expose a
+methodological error. The old Japanese narrative securely contains the
+withdrawal/darkness/emergence motif. The specific three-days-and-three-nights
+duration used in some comparisons belongs to a later blind-\emph{biwa}
+ritual tradition, in which three days and nights of \emph{mikagura} occur
+before the cave still remains closed and further action precedes emergence.
+
+Therefore
+\[
+\text{canonical cave motif}
+\not\Rightarrow
+\text{canonical three-day duration}.
+\]
+Any implementation that silently promotes the later duration into the
+oldest textual layer fails the provenance test.
+
+\subsection{GREMLIN routing}
+
+The candidate search was routed through the live GREMLIN/PhaseNav layer.
+The first two candidate species were:
+\begin{enumerate}
+  \item \textbf{OWL}: primary-evidence methodology;
+  \item \textbf{SPIDER}: structural relation/dependency.
+\end{enumerate}
+The ordering is adopted as a methodological constraint:
+\[
+\mathrm{SOURCE}
+\rightarrow
+\mathrm{PROVENANCE}
+\rightarrow
+\mathrm{EVENT\ GRAPH}
+\rightarrow
+\mathrm{RELATION\ CLASS}.
+\]
+GREMLIN output remains candidate-only; it is not an evidential authority.
+
+\subsection{Falsification criteria}
+
+The \(3\to2\to1\to0\) hypothesis is weakened or rejected when:
+\begin{enumerate}
+  \item the partition must be changed separately for each tradition;
+  \item only the same numeral survives while transition graphs disagree;
+  \item a later textual layer must be promoted to an older one to obtain a
+        match;
+  \item the proposed isomorphism fails preservation of order or transition
+        type;
+  \item astronomical parameters must be tuned after observing target dates.
+\end{enumerate}
+
+The accompanying executable tests encode these constraints so that a
+narrative resemblance cannot be promoted to an isomorphism merely because
+the same integer occurs in both sources.
