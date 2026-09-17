@@ -25,6 +25,9 @@ The working interpretation is deliberately weak:
 
 These are hypotheses to test, not conclusions.
 
+Current stress-test status: no full cross-cultural `3|2|1->0` isomorphism has been verified. Stronger projected relations have emerged for (i) a three-interval liminal threshold, and (ii) a six-to-seven active/cessation boundary. `data/relations.json` records the scope and downgrade conditions for each comparison.
+
+
 ## Method
 
 Each comparison is processed in this order:

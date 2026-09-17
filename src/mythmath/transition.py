@@ -1,7 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum
-from typing import Sequence
+from typing import Iterable, Sequence
 
 
 class RelationClass(str, Enum):
@@ -15,13 +15,19 @@ class RelationClass(str, Enum):
 class EvidenceTier(str, Enum):
     PRIMARY_CANONICAL = "PRIMARY_CANONICAL"
     ANCIENT_EXEGESIS = "ANCIENT_EXEGESIS"
+    LATE_TRADITION_TEXT = "LATE_TRADITION_TEXT"
     LATER_RITUAL = "LATER_RITUAL"
+    SCHOLARLY_SYNTHESIS = "SCHOLARLY_SYNTHESIS"
     MODERN_COMPARATIVE = "MODERN_COMPARATIVE"
 
 
 @dataclass(frozen=True)
 class EventStructure:
-    """Finite ordered motif with typed state transitions."""
+    """Finite ordered motif with typed state transitions.
+
+    `states` are labels in temporal/order sequence.
+    `transitions[i]` labels the edge states[i] -> states[i+1].
+    """
     states: tuple[str, ...]
     transitions: tuple[str, ...]
     numeric_markers: tuple[int, ...] = ()
@@ -31,6 +37,45 @@ class EventStructure:
             raise ValueError("at least one state is required")
         if len(self.transitions) != max(0, len(self.states) - 1):
             raise ValueError("transitions must have len(states)-1 entries")
+
+
+@dataclass(frozen=True)
+class BoundarySchedule:
+    """Projected schedule: N active steps followed by a typed boundary step.
+
+    This deliberately ignores the narrative semantics before the boundary.
+    It is therefore suitable only for testing a projected schedule relation,
+    never for declaring two complete myths equivalent.
+    """
+    active_steps: int
+    boundary_step: int
+    boundary_type: str
+
+    def __post_init__(self) -> None:
+        if self.active_steps < 1:
+            raise ValueError("active_steps must be positive")
+        if self.boundary_step <= self.active_steps:
+            raise ValueError("boundary_step must follow active_steps")
+        if not self.boundary_type.strip():
+            raise ValueError("boundary_type is required")
+
+
+def classify_boundary_schedule(a: BoundarySchedule, b: BoundarySchedule) -> RelationClass:
+    """Classify only the abstract active->boundary schedule.
+
+    Same count, same boundary position, and same boundary semantics gives an
+    isomorphism of the *projected schedule*. Same geometry but different
+    semantics is only an order-homomorphism. A matching boundary number alone
+    is not structural evidence.
+    """
+    same_geometry = (a.active_steps, a.boundary_step) == (b.active_steps, b.boundary_step)
+    if same_geometry and a.boundary_type == b.boundary_type:
+        return RelationClass.ISOMORPHISM
+    if same_geometry:
+        return RelationClass.ORDER_HOMOMORPHISM
+    if a.boundary_step == b.boundary_step:
+        return RelationClass.NUMBER_MATCH_ONLY
+    return RelationClass.INSUFFICIENT
 
 
 CREATION_BLOCKS: tuple[tuple[int, ...], ...] = ((1, 2, 3), (4, 5), (6,))
@@ -57,20 +102,22 @@ def is_strict_descent(signature: Sequence[int]) -> bool:
 def classify_relation(a: EventStructure, b: EventStructure) -> RelationClass:
     """Classify relation conservatively.
 
-    Exact isomorphism means equality of ordered transition signatures after
-    forgetting state names. Order-homomorphism permits extra intermediate
-    states while preserving the first motif's edge types as an ordered
-    subsequence. Shared motifs alone are analogy; a shared number alone is
-    never structural equivalence.
+    Exact isomorphism here means equality of ordered transition signatures
+    after forgetting state names. An order-homomorphism permits b to contain
+    extra intermediate states while preserving a's transition sequence as an
+    ordered subsequence. Shared semantic motifs alone are only analogy.
+    A shared number with no structural preservation is NUMBER_MATCH_ONLY.
     """
     if a.transitions == b.transitions and len(a.states) == len(b.states):
         return RelationClass.ISOMORPHISM
 
+    # ordered subsequence test on edge labels
     it = iter(b.transitions)
     if a.transitions and all(any(x == y for y in it) for x in a.transitions):
         return RelationClass.ORDER_HOMOMORPHISM
 
-    if set(a.transitions) & set(b.transitions):
+    shared_transition_types = set(a.transitions) & set(b.transitions)
+    if shared_transition_types:
         return RelationClass.ANALOGY
 
     if set(a.numeric_markers) & set(b.numeric_markers):
@@ -80,7 +127,7 @@ def classify_relation(a: EventStructure, b: EventStructure) -> RelationClass:
 
 
 def cycle_completion_time(phi0: float, omega: float) -> float:
-    """First positive return time for phi(t)=phi0+omega*t modulo 2π."""
+    """First positive return time for uniform phase phi(t)=phi0+omega*t mod 2π."""
     import math
     if not math.isfinite(phi0) or not math.isfinite(omega):
         raise ValueError("finite phase and angular velocity required")

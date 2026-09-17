@@ -2,10 +2,12 @@ import math
 import pytest
 
 from mythmath.transition import (
+    BoundarySchedule,
     EvidenceTier,
     EventStructure,
     RelationClass,
     active_block_signature,
+    classify_boundary_schedule,
     classify_relation,
     cycle_completion_time,
     horizon,
@@ -47,8 +49,14 @@ def test_number_three_alone_is_not_isomorphism():
 
 
 def test_amaterasu_guard_canonical_story_cannot_inherit_late_three_day_datum():
-    canonical = {"tier": EvidenceTier.PRIMARY_CANONICAL, "supports": {"darkness_to_light_transition"}}
-    later = {"tier": EvidenceTier.LATER_RITUAL, "supports": {"three_interval_liminal_motif"}}
+    canonical = {
+        "tier": EvidenceTier.PRIMARY_CANONICAL,
+        "supports": {"darkness_to_light_transition"},
+    }
+    later = {
+        "tier": EvidenceTier.LATER_RITUAL,
+        "supports": {"three_interval_liminal_motif"},
+    }
     assert "three_interval_liminal_motif" not in canonical["supports"]
     assert later["tier"] is EvidenceTier.LATER_RITUAL
 
@@ -62,3 +70,49 @@ def test_cycle_completion_operator():
 def test_cycle_completion_fail_closed(omega):
     with pytest.raises(ValueError):
         cycle_completion_time(0.0, omega)
+
+
+def test_genesis_gilgamesh_projected_schedule_isomorphic_only_at_schedule_level():
+    genesis = BoundarySchedule(active_steps=6, boundary_step=7, boundary_type="cessation")
+    gilgamesh = BoundarySchedule(active_steps=6, boundary_step=7, boundary_type="cessation")
+    assert classify_boundary_schedule(genesis, gilgamesh) is RelationClass.ISOMORPHISM
+
+
+def test_inanna_seven_gate_boundary_same_geometry_different_semantics():
+    genesis = BoundarySchedule(active_steps=6, boundary_step=7, boundary_type="cessation")
+    inanna = BoundarySchedule(active_steps=6, boundary_step=7, boundary_type="death_threshold")
+    assert classify_boundary_schedule(genesis, inanna) is RelationClass.ORDER_HOMOMORPHISM
+
+
+def test_inanna_full_story_not_exact_resurrection_isomorphism():
+    resurrection_core = EventStructure(
+        states=("death", "liminal", "life"),
+        transitions=("death_to_liminal", "liminal_to_life"),
+        numeric_markers=(3,),
+    )
+    inanna_full = EventStructure(
+        states=("descent", "corpse", "waiting", "rescue", "life", "ascent"),
+        transitions=("descent", "death_to_liminal", "rescue_after_three", "liminal_to_life", "ascent"),
+        numeric_markers=(3, 7),
+    )
+    assert classify_relation(resurrection_core, inanna_full) is RelationClass.ORDER_HOMOMORPHISM
+
+
+def test_zoroastrian_three_day_threshold_is_not_resurrection_isomorphism():
+    resurrection = EventStructure(
+        states=("death", "liminal", "life"),
+        transitions=("death_to_liminal", "liminal_to_life"),
+        numeric_markers=(3,),
+    )
+    zoroastrian = EventStructure(
+        states=("death", "liminal", "judgment"),
+        transitions=("death_to_liminal", "judgment_transition"),
+        numeric_markers=(3, 4),
+    )
+    assert classify_relation(resurrection, zoroastrian) is RelationClass.ANALOGY
+
+
+def test_matching_six_or_seven_counts_without_cessation_is_number_match_only():
+    creation_variant = BoundarySchedule(active_steps=5, boundary_step=7, boundary_type="additional_creation")
+    genesis = BoundarySchedule(active_steps=6, boundary_step=7, boundary_type="cessation")
+    assert classify_boundary_schedule(genesis, creation_variant) is RelationClass.NUMBER_MATCH_ONLY

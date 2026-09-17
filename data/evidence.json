@@ -52,5 +52,77 @@
     "tier": "LATER_RITUAL",
     "supports": ["three_interval_liminal_motif"],
     "does_not_establish": ["Kojiki three-day duration", "exact Christian-Japanese isomorphism"]
+  },
+  {
+    "id": "INANNA_DESCENT_3D3N_REVIVAL",
+    "tradition": "Sumerian",
+    "source": "ETCSL c.1.4.1, Inana's descent to the nether world, lines 164-281",
+    "claim": "Inana is made a corpse and hung on a hook; after three days and three nights Ninshubur begins the rescue procedure; Enki later supplies life-giving plant and water, after which Inana arises.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["three_interval_liminal_threshold", "death_liminal_life_order_relation"],
+    "does_not_establish": ["resurrection occurred exactly at the end of the third day", "direct influence on Christian texts", "full-narrative isomorphism"]
+  },
+  {
+    "id": "INANNA_SEVEN_GATES_6_TO_7",
+    "tradition": "Sumerian",
+    "source": "ETCSL c.1.4.1, lines 129-172",
+    "claim": "Inana passes seven gates; at the sixth her measuring rod and line are removed, at the seventh her final garment is removed; immediately afterward she is judged and becomes a corpse.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["six_to_seven_regime_change", "seven_gate_completion"],
+    "does_not_establish": ["seventh-as-rest", "Genesis-derived causal relation", "3|2|1 partition"]
+  },
+  {
+    "id": "GILGAMESH_XI_6_TO_7_CESSATION",
+    "tradition": "Standard Babylonian Gilgamesh",
+    "source": "Epic of Gilgamesh Tablet XI, flood account, ETANA translation lines ~127-132",
+    "claim": "The flood is described as raging for six days and seven nights; when the seventh day arrives, the gale relents and the deluge ends.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["six_to_seven_cessation_schedule"],
+    "does_not_establish": ["shared theology with Genesis", "independent statistical sample from Genesis", "3|2|1 partition"]
+  },
+  {
+    "id": "ZOROASTRIAN_SOUL_3_TO_4",
+    "tradition": "Zoroastrian",
+    "source": "Vīdēvdād 19.27ff and later tradition as summarized by Encyclopaedia Iranica",
+    "claim": "The soul remains near the corpse for three days/nights and at dawn after the third day proceeds toward the Činwad bridge and judgment.",
+    "tier": "SCHOLARLY_SYNTHESIS",
+    "supports": ["three_interval_liminal_threshold", "three_to_four_regime_change"],
+    "does_not_establish": ["resurrection", "third-day return to bodily life", "full equivalence with Christian resurrection"]
+  },
+  {
+    "id": "KATHA_UPANISHAD_3_NIGHTS",
+    "tradition": "Upanishadic India",
+    "source": "Katha Upanishad 1.1.7-9",
+    "claim": "Nachiketas remains three nights fasting in the house of Yama/Death; Yama then returns and grants three boons, one for each night.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["three_night_liminal_threshold"],
+    "does_not_establish": ["resurrection", "3|2|1 partition", "direct relation to Near Eastern traditions"]
+  },
+  {
+    "id": "KOJIKI_OPENING_3_THEN_2",
+    "tradition": "Japanese",
+    "source": "Kojiki chapter 1, Kokugakuin University English translation",
+    "claim": "At the beginning of heaven and earth, three solitary deities appear and hide their bodies; next, two further solitary deities appear and also hide their bodies.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["three_then_two_prefix_partition"],
+    "does_not_establish": ["continuation as 3|2|1|0", "third-day threshold", "six-to-seven closure"]
+  },
+  {
+    "id": "ZOROASTRIAN_6_7_CREATION_VARIANTS",
+    "tradition": "Middle Persian Zoroastrian cosmogony",
+    "source": "Bundahišn creation accounts summarized in Encyclopaedia Iranica, Elements i",
+    "claim": "The tradition preserves both a six-creation scheme associated with six gāhānbārs ending with man and seven-stage creation accounts that include fire (or, in another variant, Ohrmazd).",
+    "tier": "LATE_TRADITION_TEXT",
+    "supports": ["six_creation_count", "six_seven_variant_family"],
+    "does_not_establish": ["six-as-universal-horizon", "seventh-as-cessation", "single invariant creation count"]
+  },
+  {
+    "id": "ENUMA_ELISH_VI_VII_BOUNDARY",
+    "tradition": "Babylonian",
+    "source": "Enūma Eliš Tablets VI-VII",
+    "claim": "Humanity is created in Tablet VI, but the proclamation of Marduk's names already begins late in Tablet VI and continues through Tablet VII.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": ["creation_then_praise_transition"],
+    "does_not_establish": ["clean six-to-seven boundary", "six-active-then-seven-rest schedule", "full Genesis isomorphism"]
   }
 ]

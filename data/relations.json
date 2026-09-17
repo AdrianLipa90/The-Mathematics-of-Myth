@@ -1,0 +1,74 @@
+[
+  {
+    "id": "REL_GENESIS_GILGAMESH_6_7",
+    "a": "Genesis 1-2 creation/Sabbath",
+    "b": "Gilgamesh XI flood cessation",
+    "scope": "projected six-active-to-seventh-cessation schedule",
+    "class": "ISOMORPHISM",
+    "historical_independence": "NOT_ASSUMED",
+    "reason": "Both projected schedules encode six active numbered units followed by cessation on the seventh; narrative semantics are different and literary-historical dependence is not resolved by this formal match."
+  },
+  {
+    "id": "REL_GENESIS_INANNA_GATE_6_7",
+    "a": "Genesis six-to-seven boundary",
+    "b": "Inanna seven-gate descent",
+    "scope": "projected boundary geometry only",
+    "class": "ORDER_HOMOMORPHISM",
+    "historical_independence": "NOT_ASSUMED",
+    "reason": "Both have a 6->7 terminal boundary geometry, but the seventh has different semantics: cessation/rest versus final stripping followed by judgment/death."
+  },
+  {
+    "id": "REL_RESURRECTION_INANNA_3",
+    "a": "third-day resurrection motif",
+    "b": "Inanna death/rescue/revival sequence",
+    "scope": "projected death-liminal-life order",
+    "class": "ORDER_HOMOMORPHISM",
+    "historical_independence": "NOT_ESTABLISHED",
+    "reason": "Inanna is a corpse; after three days and nights rescue is initiated and she is later revived. The text does not say the revival itself occurs exactly at the third-day boundary."
+  },
+  {
+    "id": "REL_THREE_THRESHOLD_ZOROASTRIAN",
+    "a": "third-day transition motif",
+    "b": "Zoroastrian post-mortem three-night interval",
+    "scope": "three-interval liminal threshold",
+    "class": "ANALOGY",
+    "historical_independence": "NOT_ESTABLISHED",
+    "reason": "A three-unit liminal interval precedes a new regime at the bridge/judgment, but there is no bodily resurrection."
+  },
+  {
+    "id": "REL_THREE_THRESHOLD_KATHA",
+    "a": "third-day transition motif",
+    "b": "Nachiketas at the house of Death",
+    "scope": "three-night liminal threshold",
+    "class": "ANALOGY",
+    "historical_independence": "NOT_ESTABLISHED",
+    "reason": "Three nights in Death's house precede Yama's return and a new instructional/boon phase; it is not a death-to-life resurrection."
+  },
+  {
+    "id": "REL_3210_KOJIKI_PREFIX",
+    "a": "123|45|6->7 candidate",
+    "b": "Kojiki opening deity sequence",
+    "scope": "prefix block lengths only",
+    "class": "ANALOGY",
+    "historical_independence": "NOT_ESTABLISHED",
+    "reason": "The Kojiki explicitly groups first three solitary deities and then two solitary deities, giving a 3|2 prefix, but no textual 1|0 continuation has been established."
+  },
+  {
+    "id": "REL_67_ZOROASTRIAN_CREATION",
+    "a": "six-as-horizon/seven-postclosure candidate",
+    "b": "Zoroastrian six/seven creation variants",
+    "scope": "creation-count comparison",
+    "class": "NUMBER_MATCH_ONLY",
+    "historical_independence": "NOT_ESTABLISHED",
+    "reason": "The tradition contains both six- and seven-creation schemes; the seventh is not consistently a cessation state, so the counts alone do not preserve the proposed operator."
+  },
+  {
+    "id": "REL_67_ENUMA_ELISH",
+    "a": "six-active/seven-postclosure candidate",
+    "b": "Enuma Elish Tablets VI-VII",
+    "scope": "tablet boundary comparison",
+    "class": "ANALOGY",
+    "historical_independence": "NOT_ASSUMED",
+    "reason": "Human creation occurs in VI and VII is dominated by names/praise, but the name-proclamation already begins in VI, so the proposed boundary is not clean."
+  }
+]
