@@ -1,0 +1,121 @@
+\section{Candidate Divine Calendar: A Fail-Closed Construction}
+\label{sec:divine-calendar}
+
+\subsection{What is now attested}
+
+A striking but carefully delimited numerical fact emerges from first-millennium
+Mesopotamian learned spellings.  Six successive multiples of ten can each write
+the name of a major deity:
+\[
+\begin{array}{c|cccccc}
+N & 10 & 20 & 30 & 40 & 50 & 60\\ \hline
+\text{deity} & \text{Adad} & \text{Shamash} & \text{Sin} & \text{Ea} & \text{Enlil} & \text{Anu}
+\end{array}
+\]
+ORACC independently documents these numerical writings.  This is a genuine
+historical number--deity system.  It is \emph{not}, by itself, a calendar.
+The guard case is Ištar, whose numerical spelling is 15; the pantheon is
+therefore not an exclusively decadal sequence.
+
+\subsection{Six equal active sectors}
+
+The candidate creation calendar is defined on an abstract accumulated phase
+(or winding count) $W$, without yet identifying its physical oscillator:
+\[
+D_n=\{W:10(n-1)\leq W<10n\},\qquad n=1,\ldots,6.
+\]
+The corresponding endpoints are
+\[
+B_n=10n\in\{10,20,30,40,50,60\}.
+\]
+The coincidence between these six endpoints and the six attested divine
+numerals is recorded as a \emph{structural candidate}.  Historical dependence,
+calendar function, and astronomical meaning remain separate questions.
+
+\subsection{The 60 boundary and the seventh state}
+
+At the endpoint of the sixth active sector,
+\[
+W=60.
+\]
+For a phase coordinate only, we may write
+\[
+\phi_{60}(W)=W\bmod 60,
+\qquad
+\phi_{60}(60)=0.
+\]
+This expresses mathematical closure of a base-60 phase.  It must not be
+misreported as evidence that ancient scribes possessed a theological concept
+of ``zero at Sabbath.''  The historical fact is weaker: sexagesimal counting
+uses 60 as a radix transition, and learned divine writing associates 60 with
+Anu.
+
+We therefore define the seventh position as a discrete post-closure state,
+not as an automatically assumed interval $[60,70)$:
+\[
+\mathcal K(W)=
+\begin{cases}
+(\mathrm{ACTIVE},\lfloor W/10\rfloor+1), & 0\le W<60,\\
+(\mathrm{POST\mbox{-}CLOSURE},7), & W=60.
+\end{cases}
+\]
+No rule is currently assigned for $W>60$.  This is intentionally fail-closed.
+
+The literary structure of Genesis is compatible with this distinction in one
+specific sense.  Days one through six receive the recurring evening--morning
+closure, including the sixth day in Gen.~1:31; Gen.~2:2--3 instead describes
+the seventh by completion and cessation and does not append another
+``evening and morning'' formula.  This observation supports treating day seven
+as textually distinct, but does not establish the phase model.
+
+\subsection{The 360 level}
+
+The number 360 is independently well attested in several ancient systems of
+time reckoning.  Egypt used a civil structure of twelve 30-day months, each
+month divided into three 10-day weeks, followed by five epagomenal days.  In
+ancient Judah, Jonathan Ben-Dov argues for a schematic 360-day administrative
+and literary year; the priestly flood chronology is particularly diagnostic
+because five schematic months correspond to exactly 150 days.
+
+Thus the identity
+\[
+360=12\times30=36\times10=6\times60
+\]
+is historically surrounded by real calendrical structures, although the last
+factorisation, $6\times60$, is our mathematical re-expression rather than an
+attested ancient definition of a ``divine year.''  Later Indian cosmic-time
+traditions provide an independent control in which a divine year is explicitly
+constructed from 360 divine-day units.
+
+This motivates a provisional hierarchy
+\[
+10\;\longrightarrow\;60\;\longrightarrow\;360,
+\]
+with epistemic labels
+\[
+\text{sector candidate}\;\longrightarrow\;
+\text{closure candidate}\;\longrightarrow\;
+\text{schematic-year candidate}.
+\]
+None of these labels fixes a conversion into terrestrial years.
+
+\subsection{Physical clock still unresolved}
+
+The calendar must not be converted into gigayears until its oscillator is
+specified.  The correct generic quantity is an integrated phase,
+\[
+W_X(t)=\frac{1}{2\pi}\int_{t_0}^{t}\Omega_X(\tau)\,d\tau,
+\]
+not the backward extrapolation of the present Solar orbital period.  A physical
+proposal for $X$ must be fixed before fitting chronology, and must survive
+uncertainty in the evolving Galactic potential.
+
+\subsection{Falsification conditions}
+
+The divine-calendar candidate is weakened or rejected if (i) the endpoint
+sequence requires post-hoc changes, (ii) the physical oscillator is selected
+only after seeing the desired age, (iii) the divine numerals prove unrelated
+to any temporal or ordered structure beyond scribal shorthand, or (iv) the
+$W=60$ boundary does not remain stable under a physically reconstructed
+phase history.  Conversely, the model gains support only from predictions
+fixed before new evidence is inspected.

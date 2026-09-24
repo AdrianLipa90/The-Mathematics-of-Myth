@@ -1,0 +1,184 @@
+[
+  {
+    "id": "GENESIS_2_2_3",
+    "tradition": "Hebrew Bible",
+    "source": "Genesis 2:2-3",
+    "claim": "Work is completed by the sixth day; the seventh is distinguished by cessation/rest.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "six_to_seven_closure"
+    ],
+    "does_not_establish": [
+      "3|2|1 partition",
+      "galactic period"
+    ]
+  },
+  {
+    "id": "HOSEA_6_2",
+    "tradition": "Hebrew Bible",
+    "source": "Hosea 6:2",
+    "claim": "After two days: revival; on the third day: raising/living.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "third_day_transition"
+    ],
+    "does_not_establish": [
+      "universal threshold law"
+    ]
+  },
+  {
+    "id": "PAUL_1COR_15_4",
+    "tradition": "Early Christianity",
+    "source": "1 Corinthians 15:4",
+    "claim": "Raised on the third day.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "third_day_transition"
+    ],
+    "does_not_establish": [
+      "cross-cultural isomorphism"
+    ]
+  },
+  {
+    "id": "PHILO_ALLEG_INT_I_2_5",
+    "tradition": "Hellenistic Judaism",
+    "source": "Philo, Allegorical Interpretation I.2-5",
+    "claim": "Six is treated as a perfect/order number rather than a literal duration; time is indexed by heavenly motion; seven is assigned a distinct post-six role.",
+    "tier": "ANCIENT_EXEGESIS",
+    "supports": [
+      "six_as_order",
+      "heavenly_motion_time",
+      "six_to_seven_regime_change"
+    ],
+    "does_not_establish": [
+      "galactic orbit identification"
+    ]
+  },
+  {
+    "id": "KOJIKI_AMATERASU_CAVE",
+    "tradition": "Japanese",
+    "source": "Kojiki, Amaterasu cave episode",
+    "claim": "Solar deity withdraws into a cave and later emerges, restoring light.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "darkness_to_light_transition"
+    ],
+    "does_not_establish": [
+      "three_day_duration"
+    ]
+  },
+  {
+    "id": "WATAMASHI_BIWA_THREE_DAYS",
+    "tradition": "Japanese ritual / blind biwa",
+    "source": "Watamashi narrative reported in Saida Khalmirzaeva, Rites of Blind Biwa Players",
+    "claim": "A later ritual narrative contains three days and three nights of mikagura before the cave remains closed; subsequent musical/interpersonal action precedes emergence.",
+    "tier": "LATER_RITUAL",
+    "supports": [
+      "three_interval_liminal_motif"
+    ],
+    "does_not_establish": [
+      "Kojiki three-day duration",
+      "exact Christian-Japanese isomorphism"
+    ]
+  },
+  {
+    "id": "INANNA_DESCENT_3D3N_REVIVAL",
+    "tradition": "Sumerian",
+    "source": "ETCSL c.1.4.1, Inana's descent to the nether world, lines 164-281",
+    "claim": "Inana is made a corpse and hung on a hook; after three days and three nights Ninshubur begins the rescue procedure; Enki later supplies life-giving plant and water, after which Inana arises.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "three_interval_liminal_threshold",
+      "death_liminal_life_order_relation"
+    ],
+    "does_not_establish": [
+      "resurrection occurred exactly at the end of the third day",
+      "direct influence on Christian texts",
+      "full-narrative isomorphism"
+    ]
+  },
+  {
+    "id": "INANNA_SEVEN_GATES_6_TO_7",
+    "tradition": "Sumerian",
+    "source": "ETCSL c.1.4.1, lines 129-172",
+    "claim": "Inana passes seven gates; at the sixth her measuring rod and line are removed, at the seventh her final garment is removed; immediately afterward she is judged and becomes a corpse.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "six_to_seven_regime_change",
+      "seven_gate_completion"
+    ],
+    "does_not_establish": [
+      "seventh-as-rest",
+      "Genesis-derived causal relation",
+      "3|2|1 partition"
+    ]
+  },
+  {
+    "id": "GILGAMESH_XI_6_TO_7_CESSATION",
+    "tradition": "Standard Babylonian Gilgamesh",
+    "source": "Epic of Gilgamesh Tablet XI, flood account, ETANA translation lines ~127-132",
+    "claim": "The flood is described as raging for six days and seven nights; when the seventh day arrives, the gale relents and the deluge ends.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "six_to_seven_cessation_schedule"
+    ],
+    "does_not_establish": [
+      "shared theology with Genesis",
+      "independent statistical sample from Genesis",
+      "3|2|1 partition"
+    ]
+  },
+  {
+    "id": "ZOROASTRIAN_SOUL_3_TO_4",
+    "tradition": "Zoroastrian",
+    "source": "VÄ«dÄ“vdÄd 19.27ff and later tradition as summarized by Encyclopaedia Iranica",
+    "claim": "The soul remains near the corpse for three days/nights and at dawn after the third day proceeds toward the ÄŒinwad bridge and judgment.",
+    "tier": "SCHOLARLY_SYNTHESIS",
+    "supports": [
+      "three_interval_liminal_threshold",
+      "three_to_four_regime_change"
+    ],
+    "does_not_establish": [
+      "resurrection",
+      "third-day return to bodily life",
+      "full equivalence with Christian resurrection"
+    ]
+  },
+  {
+    "id": "KATHA_UPANISHAD_3_NIGHTS",
+    "tradition": "Upanishadic India",
+    "source": "Katha Upanishad 1.1.7-9",
+    "claim": "Nachiketas remains three nights fasting in the house of Yama/Death; Yama then returns and grants three boons, one for each night.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "three_night_liminal_threshold"
+    ],
+    "does_not_establish": [
+      "resurrection",
+      "3|2|1 partition",
+      "direct relation to Near Eastern traditions"
+    ]
+  },
+  {
+    "id": "KOJIKI_OPENING_3_THEN_2",
+    "tradition": "Japanese",
+    "source": "Kojiki chapter 1, Kokugakuin University English translation",
+    "claim": "At the beginning of heaven and earth, three solitary deities appear and hide their bodies; next, two further solitary deities appear and also hide their bodies.",
+    "tier": "PRIMARY_CANONICAL",
+    "supports": [
+      "three_then_two_prefix_partition"
+    ],
+    "does_not_establish": [
+      "continuation as 3|2|1|0",
+      "third-day threshold",
+      "six-to-seven closure"
+    ]
+  },
+  {
+    "id": "ZOROASTRIAN_6_7_CREATION_VARIANTS",
+    "tradition": "Middle Persian Zoroastrian cosmogony",
+    "source": "BundahiÅ¡n creation accounts summarized in Encyclopaedia Iranica, Elements i",
+    "claim": "The tradition preserves both a six-creation scheme associated with six gÄhÇ[˜± \œÈ[™[™ÈÚ]X[ˆ[™Ù]™[‹\İYÙHÜ™X][ÛˆXØÛİ[È][˜ÛYHš\™H
+Ü‹[ˆ[›İ\ˆ˜\šX[Ú›X^™
+Kˆ‹ˆY\ˆˆ“UWÕQUSÓ—ÕV‹ˆœİ\ÜÈˆÂˆœÚ^ØÜ™X][Û—ØÛİ[‹ˆœÚ^ÜÙ]™[—İ˜\šX[Ù˜[Z[H‚ˆKˆ™Ù\×Û›İÙ\İX›\ÚˆÂˆœÚ^X\Ë][š]™\œØ[ZÜš^›Ûˆ‹ˆœÙ]™[X\ËXÙ\ÜØ][Ûˆ‹ˆœÚ[™ÛH[˜\šX[Ü™X][ÛˆÛİ[‚ˆBˆKˆÂˆšYˆ‘S•SPWÑSTÒÕ’WÕ’RWĞ“ÕS‘T–H‹ˆ˜Y][Ûˆˆ˜X[ÛšX[ˆ‹ˆœÛİ\˜ÙHˆ‘[±jÛXH[qhHX›]È’KU’RH‹ˆ˜ÛZ[Hˆ’[X[š]H\ÈÜ™X]Y[ˆX›]’K]H›ØÛ[X][ÛˆÙˆX\™ZÉÜÈ˜[Y\È[™XYH™YÚ[œÈ]H[ˆX›]’H[™ÛÛ[Y\È›İYÚX›]’RKˆ‹ˆY\ˆˆ”’SPT–WĞĞS“Ó’PĞS‹ˆœİ\ÜÈˆÂˆ˜Ü™X][Û—İ[—Ü˜Z\ÙWİ˜[œÚ][Ûˆ‚ˆKˆ™Ù\×Û›İÙ\İX›\ÚˆÂˆ˜ÛX[ˆÚ^]Ë\Ù]™[ˆ›İ[™\H‹ˆœÚ^XXİ]™K][‹\Ù]™[‹\™\İØÚY[H‹ˆ™[Ù[™\Ú\È\ÛÛ[Üœ\ÛH‚ˆBˆKˆÂˆšYˆ‘QÖTĞÓÑ‘’S—ÕV×ÌMMÌMŒÓST—ĞÖPÓH‹ˆ˜Y][Ûˆˆ[˜ÚY[YŞ\X[ˆ‹ˆœÛİ\˜ÙHˆÛÙ™š[ˆ^ÈÜ[ÈMMLMŒÈ[˜[\Ú\ÈHŞ][Hš\ÚÚ[‹H[˜ÚY[YŞ\X[ˆ›ÛÚÈÙˆH[ÛÛˆ
+ŒNJH‹ˆ˜ÛZ[HˆHÙ\]Y[˜ÙHÙˆ™[YÚ[İ\È^È\È[˜[\ÙY\ÈHÚ›Û›ÛÙÚXØ[[˜\‹[[ÛŞXÛH[˜ÛÛ\\ÜÚ[™È[š\ÚXš[]KØ^[™Ë[[ÛÛ‹Ø[š[™Ë\İÜ™\ØÙ[[™™[™]ÙYÛÛš[˜İ[Û‹ˆ‹ˆY\ˆˆ”ĞÒÓT“WÔÖS•TÒTÈ‹ˆœİ\ÜÈˆÂˆ›^]X×İ^ØØ[—Ù[˜ÛÙWØ\İ›Û›ÛZXØ[ØŞXÛH‹ˆ›Ü™\™YÜ\ÙWÜİXİ\™H‚ˆKˆ™Ù\×Û›İÙ\İX›\ÚˆÂˆ‘Ù[™\Ú\È\Ù\ÈHØ[YHÛÙH‹ˆ™YKY^H™\İ\œ™Xİ[Ûˆ\È[˜\ˆ‹ˆ™Ø[XİXËY^H[\œ™]][Ûˆ‚ˆBˆKˆÂˆšYˆP–SÓ’PS—ÔT’SÑP×ĞTÕ“Ó“ÓVWĞĞTP’SUH‹ˆ˜Y][Ûˆˆ“Y\ÛÜİ[ZX[ˆ\İ›Û›Û^H‹ˆœÛİ\˜ÙHˆØ[XœšYÙH\İÜHÙˆØÚY[˜ÙKØÚY[˜ÙH[™[˜ÚY[Y\ÛÜİ[ZXH‹ˆ˜ÛZ[Hˆ˜X[ÛšX[ˆ\İ›Û›Û^H[Y\šXØ[HØÚ[X]^™Y\š[ÙXÈ[›ÛY[˜H[˜ÛY[™È[˜\ˆš\ÚXš[]K^[YÚ˜\šX][Û‹XÛ\Ù\ËŞ[›ÙXÈ[™]\H\X\˜[˜Ù\Ë[™š\œİ[˜\ˆš\ÚXš[]Kˆ‹ˆY\ˆˆ”ĞÒÓT“WÔÖS•TÒTÈ‹ˆœİ\ÜÈˆÂˆ˜[˜ÚY[Ü]X[]]]™WØŞXÛWÛ[Ù[[™È‚ˆKˆ™Ù\×Û›İÙ\İX›\ÚˆÂˆ›^]È\™H[˜ÛÙY\]X][ÛœÈ‹ˆ˜šX›XØ[ÙYZÈ\š]™\Èœ›ÛH˜X[ÛšX[ˆ[˜\ˆ]X\\œÈ‚ˆBˆKˆÂˆšYˆ“ST—ÒS•’TÒP’SUWÌ—ÍWÕ×ÍÍWÑVTÈ‹ˆ˜Y][Ûˆˆ\İ›Û›ÛZXØ[[[Ù[‹ˆœÛİ\˜ÙHˆ“[Ù\›ˆ˜ZÙYY^YH[˜\ˆš\ÚXš[]HŞ[\Ú\È‹ˆ˜ÛZ[Hˆ•H[ÛÛˆX^H™H[š\ÚX›H\›İ[™ÛÛš[˜İ[Ûˆ›Üˆ\›Ş[X][H‹HÈH^\È\[™[™ÈÛˆÙ[ÛY]H[™ØœÙ\š[™ÈÛÛ™][ÛœËˆ‹ˆY\ˆˆ“SÑT“—ĞÓÓTTUU‘H‹ˆœİ\ÜÈˆÂˆ›˜]\˜[İ™YWÙ^WÛ[Û[Ù[‚ˆKˆ™Ù\×Û›İÙ\İX›\ÚˆÂˆœÜXÚYšXÈ[˜ÚY[^]Ø]\Ø][Ûˆ‹ˆ˜İ[\˜[˜[œÛZ\ÜÚ[Ûˆ‚ˆBˆB—B

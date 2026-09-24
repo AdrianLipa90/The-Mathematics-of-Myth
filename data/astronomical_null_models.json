@@ -1,0 +1,36 @@
+[
+  {
+    "id": "LUNAR_INVISIBILITY_THREE_DAY_NULL",
+    "quantity": "naked-eye lunar invisibility around conjunction",
+    "observational_range_days": [
+      2.5,
+      4.5
+    ],
+    "candidate_marker_days": 3.0,
+    "status": "PLAUSIBLE_NULL_MODEL",
+    "interpretation": "A three-day liminal/dark interval can arise from ordinary lunar visibility geometry; occurrence of the numeral 3 alone is therefore weak evidence for cross-cultural structural transmission.",
+    "source": "Ancient Mesoamerica review of lunar visibility citing Schaefer; invisibility can span about 2.5, 3.5, or 4.5 days."
+  },
+  {
+    "id": "LUNAR_QUARTER_SEVEN_DAY_NULL",
+    "quantity": "mean synodic month / 4",
+    "synodic_month_days": 29.530588,
+    "computed_quarter_days": 7.382647,
+    "candidate_marker_days": 7.0,
+    "absolute_offset_days": 0.3826470000000004,
+    "status": "NUMERICAL_PROXIMITY_ONLY",
+    "interpretation": "Seven days approximates a quarter lunation, but numerical proximity does not establish that the biblical week derives from lunar quarters; modern scholarship explicitly disputes simple Babylonian-calendar derivations of the Sabbath week."
+  },
+  {
+    "id": "EGYPTIAN_COFFIN_TEXTS_LUNAR_ENCODING",
+    "quantity": "mythic-text astronomical phase ordering",
+    "status": "SOURCE_CONTROLLED_PROOF_OF_PRINCIPLE",
+    "interpretation": "Coffin Texts spells 154-160 have been analysed as a chronologically ordered mythological account of the lunar month: invisibility, waxing, full moon, waning, last crescent, conjunction. This demonstrates that ancient religious/mythic texts can encode observable cyclic astronomy without implying the same mechanism in Genesis."
+  },
+  {
+    "id": "BABYLONIAN_PERIODIC_ASTRONOMY",
+    "quantity": "numerical modelling of periodic astral phenomena",
+    "status": "HISTORICAL_CAPABILITY_EVIDENCE",
+    "interpretation": "Mesopotamian astronomical traditions numerically schematized lunar visibility, daylight, eclipses, synodic appearances, and first lunar visibility. This establishes historical capability to represent celestial periodicity quantitatively."
+  }
+]
