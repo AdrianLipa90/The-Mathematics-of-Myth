@@ -1,0 +1,45 @@
+{
+  "schema": "LOSSLESS_BRANCH_MERGE_MANIFEST_V1",
+  "repository": "AdrianLipa90/The-Mathematics-of-Myth",
+  "target_branch": "main",
+  "source_branch": "feat/foundation-v0.1.0",
+  "source_head_sha": "be4fd3dc8ac15504b6e94fafb535af05bcecb9a6",
+  "merge_base_sha": "acfb65df8fddfcb049f5050578434338928e30d5",
+  "target_parent_sha": "09bb4e0165e8c01f36d6fb2030951a14e5f0dd15",
+  "policy": "APPLY_BRANCH_ONLY_CHANGES_KEEP_TARGET_ON_TRUE_CONFLICT_ARCHIVE_BRANCH_BLOB_NEVER_DELETE_TARGET",
+  "applied_paths": [
+    "case_studies/1_ENOCH_72_HALF_TURN.md",
+    "data/1_enoch_ch72_solar_cycle.json",
+    "docs/METHODOLOGY.md",
+    "docs/TEMPORAL_MODELS.md",
+    "src/mythmath/halfturn.py",
+    "tests/test_halfturn.py"
+  ],
+  "conflicts": [
+    {
+      "path": "README.md",
+      "main": "b7e4b7a98cb44c4104f6ffe2ed0efe14d4b30b2d",
+      "base": "02ed599cad279816f2cd9dc35e7dec78cc2e7433",
+      "branch": "30d75f1a3716a6da3b63f22897b05acc72fd7429",
+      "archive_path": ".merge-preservation/feat__foundation-v0.1.0/README.md",
+      "action": "kept_main_archived_branch"
+    },
+    {
+      "path": "pyproject.toml",
+      "main": "1d06378a2077c4e4437ea51520571efd3dba4d03",
+      "base": null,
+      "branch": "2313fce46e935198f768ebfda2051cfb4f2e7f48",
+      "archive_path": ".merge-preservation/feat__foundation-v0.1.0/pyproject.toml",
+      "action": "kept_main_archived_branch"
+    },
+    {
+      "path": "src/mythmath/__init__.py",
+      "main": "b42ddccd1e2713a08bef5a442239844dbdd5e2d0",
+      "base": null,
+      "branch": "64682a39d51c1ed6ca5b7d441749ad399f7a1ad4",
+      "archive_path": ".merge-preservation/feat__foundation-v0.1.0/src/mythmath/__init__.py",
+      "action": "kept_main_archived_branch"
+    }
+  ],
+  "deletion_intents_preserved_without_deletion": []
+}
