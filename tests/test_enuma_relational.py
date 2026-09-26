@@ -10,11 +10,15 @@ from mythmath.enuma_relational import (
     Relation,
     apply_operator,
     is_relational_zero,
+    moire_superperiod_ratio,
+    normalize_angle,
     primordial_state,
+    relative_rotation,
     promote_to_physical_hypothesis,
     relational_rank,
     run_program,
     trace_is_source_complete,
+    winding_from_rotation_path,
 )
 
 
@@ -157,3 +161,46 @@ def test_every_program_operator_points_to_a_committed_text_witness():
     witness_ids = {w["id"] for w in payload["witnesses"]}
     source_ids = {op["source_id"] for op in payload["formal_program"]}
     assert source_ids <= witness_ids
+
+
+
+def test_relative_rotation_is_invariant_under_common_rigid_rotation():
+    import math
+
+    left = 0.37
+    right = 0.91
+    common = 1.234
+    assert relative_rotation(left, right) == pytest.approx(
+        relative_rotation(left + common, right + common)
+    )
+    assert relative_rotation(left, right) == pytest.approx(0.54)
+    assert normalize_angle(3 * math.pi) == pytest.approx(-math.pi)
+
+
+def test_winding_is_derived_from_accumulated_geometric_rotation():
+    import math
+
+    positive_loop = (0.0, math.pi / 2, math.pi, -math.pi / 2, 0.0)
+    negative_loop = (0.0, -math.pi / 2, -math.pi, math.pi / 2, 0.0)
+    assert winding_from_rotation_path(positive_loop) == 1
+    assert winding_from_rotation_path(negative_loop) == -1
+
+
+def test_winding_rejects_open_rotation_path():
+    with pytest.raises(ValueError):
+        winding_from_rotation_path((0.0, 0.25, 0.5))
+
+
+def test_small_relative_rotation_generates_large_moire_scale():
+    import math
+
+    ratio = moire_superperiod_ratio(math.radians(1.1))
+    assert ratio > 50.0
+    assert ratio == pytest.approx(
+        1.0 / (2.0 * math.sin(math.radians(1.1) / 2.0))
+    )
+
+
+def test_zero_rotation_moire_limit_fails_closed():
+    with pytest.raises(ValueError):
+        moire_superperiod_ratio(0.0)
