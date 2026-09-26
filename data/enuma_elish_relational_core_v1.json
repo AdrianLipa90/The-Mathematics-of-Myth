@@ -79,11 +79,19 @@
       "formal_tags": ["GENERATE", "DIFFERENTIATION"]
     },
     {
-      "id": "EE-I-014-016",
+      "id": "EE-I-014-015",
       "source": "CDLI-P480701-I",
       "tablet": 1,
-      "lines": "14-16",
-      "text_claim": "The lineage proceeds through Anu, who begets Nudimmud.",
+      "lines": "14-15",
+      "text_claim": "Anu appears as Anshar's heir and first-born.",
+      "formal_tags": ["GENERATE", "LINEAGE", "ORDERED_SUCCESSION"]
+    },
+    {
+      "id": "EE-I-016",
+      "source": "CDLI-P480701-I",
+      "tablet": 1,
+      "lines": "16",
+      "text_claim": "Anu begets Nudimmud.",
       "formal_tags": ["GENERATE", "LINEAGE", "ORDERED_SUCCESSION"]
     },
     {
