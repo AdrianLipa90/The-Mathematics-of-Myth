@@ -62,3 +62,43 @@ A repeated number is not an isomorphism.
 \]
 
 Amaterasu is an explicit guard case: the cave/emergence motif is old, but the specific "three days and three nights" duration used here is attested in a later blind-biwa ritual tradition, not in the oldest *Kojiki* account. The tests prevent that later datum from being silently promoted to canonical evidence.
+
+
+## Mayor Formalism v0.1
+
+A separate research branch formalizes the cross-disciplinary method visible in
+Adrienne Mayor's work without importing a prior physical theory into the
+sources.
+
+Core pipeline:
+
+\[
+\text{cultural representation}
+\rightarrow
+\text{typed relation graph}
+\rightarrow
+\text{independent evidence graph}
+\rightarrow
+\text{retained invariants}
+\rightarrow
+\text{negative controls}
+\rightarrow
+\text{hypothesis constraints}.
+\]
+
+Current domains: geomythology/*Mythopedia*, Styx toxicology, ancient artificial
+beings, Amazons/Scythia, extraordinary bodies, and ancient observations of
+animal self-medication.
+
+Files:
+
+- `src/mythmath/mayor_transform.py` — executable relation/invariant layer.
+- `tests/test_mayor_transform.py` — evidence-boundary and null-control tests.
+- `data/mayor_research_cases_v0_1.json` — current research/source registry.
+- `case_studies/MAYOR_FORMALISM_V0_1.md` — full derivation and falsification rules.
+- `paper/sections/mayor_formalism.tex` — paper section.
+
+The v0.1 model makes no assumption that cultural transmission is intrinsically
+lossy, granular, quantum, cosmological, or governed by any existing project
+physics. Those are separate hypotheses to test only after relation invariants
+have been extracted.
