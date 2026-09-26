@@ -30,6 +30,41 @@ Astronomical null-model status: a roughly three-day dark interval is physically 
 Current stress-test status: no full cross-cultural `3|2|1->0` isomorphism has been verified. Stronger projected relations have emerged for (i) a three-interval liminal threshold, and (ii) a six-to-seven active/cessation boundary. `data/relations.json` records the scope and downgrade conditions for each comparison.
 
 
+## Enuma Elish relational-genesis branch
+
+The current Enuma formalization introduces a source-bound relational state
+
+\[
+S_k=(V_k,R_k,N_k,D_k,F_k,B_k,T_k)
+\]
+
+and a scoped relational zero in which primordial carriers may already be in
+relation while generated entities, explicit naming, destinies, functions and
+boundaries are still absent.
+
+The executable projection is
+
+\[
+Z_R \rightarrow \delta \rightarrow \nu \rightarrow \beta \rightarrow \phi,
+\]
+
+where the operators denote generation/differentiation, naming,
+separation/boundary formation and function assignment. This is a
+**FORMALIZATION** of selected text witnesses, not a demonstrated physical
+theory.
+
+The old project archive references a 143-statement Enuma formalization, but
+the standalone 143-statement corpus has not yet been recovered in the present
+provenance pass. It is therefore marked `REFERENCE_ONLY_NOT_REVERIFIED`.
+
+See:
+
+- `case_studies/ENUMA_ELISH_RELATIONAL_GENESIS.md`;
+- `data/enuma_elish_relational_core_v1.json`;
+- `src/mythmath/enuma_relational.py`;
+- `tests/test_enuma_relational.py`;
+- `paper/sections/enuma_relational_genesis.tex`.
+
 ## Method
 
 Each comparison is processed in this order:
