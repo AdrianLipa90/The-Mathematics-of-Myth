@@ -233,3 +233,90 @@ def promote_to_physical_hypothesis(*, independent_empirical_evidence: bool) -> E
             "PHYSICAL_HYPOTHESIS promotion requires independent empirical evidence"
         )
     return EpistemicLayer.PHYSICAL_HYPOTHESIS
+
+
+# --- Geometric rotation layer -------------------------------------------------
+
+def normalize_angle(theta: float) -> float:
+    """Normalize a finite angle to the half-open interval [-pi, pi).
+
+    The helper is purely geometric. It does not assign a physical meaning to
+    the angle or identify ANU/KI labels with measured objects.
+    """
+
+    import math
+
+    if not math.isfinite(theta):
+        raise ValueError("theta must be finite")
+    return (theta + math.pi) % (2.0 * math.pi) - math.pi
+
+
+def relative_rotation(theta_left: float, theta_right: float) -> float:
+    """Return the rotation of the right frame relative to the left frame.
+
+    A common rigid rotation cancels:
+        relative_rotation(L + alpha, R + alpha) == relative_rotation(L, R)
+
+    This is the formal content of treating K_L and K_R as two projections
+    around one reference axis rather than as two unrelated absolute angles.
+    """
+
+    return normalize_angle(theta_right - theta_left)
+
+
+def winding_from_rotation_path(
+    relative_phase: tuple[float, ...],
+    *,
+    tolerance: float = 1e-9,
+) -> int:
+    """Compute integer winding induced by a closed relative-rotation path.
+
+    The input is a sequence of relative angles sampled along a closed loop.
+    Consecutive increments are taken on the principal branch. The path must
+    close modulo 2*pi and the accumulated rotation must be integer-quantized
+    within the supplied tolerance.
+
+    Thus winding is derived from accumulated geometric rotation; it is not
+    introduced as an independent primitive.
+    """
+
+    import math
+
+    if len(relative_phase) < 2:
+        raise ValueError("at least two phase samples are required")
+    if tolerance <= 0 or not math.isfinite(tolerance):
+        raise ValueError("tolerance must be positive and finite")
+    if not all(math.isfinite(theta) for theta in relative_phase):
+        raise ValueError("all phase samples must be finite")
+
+    if abs(normalize_angle(relative_phase[-1] - relative_phase[0])) > tolerance:
+        raise ValueError("relative-rotation path must close modulo 2*pi")
+
+    total_rotation = 0.0
+    for left, right in zip(relative_phase, relative_phase[1:]):
+        total_rotation += normalize_angle(right - left)
+
+    turns = round(total_rotation / (2.0 * math.pi))
+    if abs(total_rotation - turns * 2.0 * math.pi) > tolerance:
+        raise ValueError("closed path does not resolve to integer winding")
+    return int(turns)
+
+
+def moire_superperiod_ratio(relative_angle: float) -> float:
+    """Return L_moire / a for two identical 2D lattices rotated by theta.
+
+    For identical lattice constants and pure relative rotation,
+
+        L_moire / a = 1 / (2 |sin(theta/2)|).
+
+    This is a generic geometric control demonstrating how a small relative
+    rotation can generate a much larger emergent spatial scale. It is not
+    textual evidence for Enuma Elish and not a claim about a specific material.
+    """
+
+    import math
+
+    theta = abs(normalize_angle(relative_angle))
+    if theta == 0.0:
+        raise ValueError("zero relative rotation has infinite moire superperiod")
+    return 1.0 / (2.0 * abs(math.sin(theta / 2.0)))
