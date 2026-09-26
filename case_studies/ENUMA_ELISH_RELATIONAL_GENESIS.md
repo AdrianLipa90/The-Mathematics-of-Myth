@@ -418,3 +418,109 @@ The next evidential step is not another symbolic analogy. It is recovery of
 the historical 143-statement corpus, a complete line-level extraction of all
 seven tablets, and a blind comparison against alternative myths and null
 generative graphs.
+
+
+## 13. Rotation-generated winding
+
+Status: **FORMALIZATION_CANDIDATE**. This section encodes the current geometric
+model; it is not presented as a philological reading of ANU/KI and not as an
+independently verified physical identification.
+
+Let the two relational projections be written
+
+\[
+K_L,\qquad K_R,
+\]
+
+with a common reference axis denoted in the model by
+
+\[
+0_{\mathrm{ANU}}.
+\]
+
+The right projection is obtained from the left by a relative geometric
+rotation,
+
+\[
+K_R=R_{\theta}K_L.
+\]
+
+The primitive relational variable is therefore not either absolute
+orientation but
+
+\[
+\Delta\theta
+=
+\theta_R-\theta_L
+\pmod{2\pi}.
+\]
+
+A common rigid rotation cancels:
+
+\[
+(\theta_R+\alpha)-(\theta_L+\alpha)
+=
+\Delta\theta.
+\]
+
+Hence the model depends on relative geometry rather than on an externally
+chosen absolute frame.
+
+For a closed path \(\gamma\) through the relative-orientation field, define
+
+\[
+\boxed{
+W_\gamma
+=
+\frac{1}{2\pi}
+\oint_\gamma d(\Delta\theta)
+}
+\]
+
+whenever the loop closes and the accumulated rotation is integer-quantized.
+
+Thus winding is not introduced as an additional primitive:
+
+\[
+\boxed{
+\text{relative geometric rotation}
+\longrightarrow
+\text{accumulated phase}
+\longrightarrow
+\text{winding}.
+}
+\]
+
+The executable implementation therefore computes winding from a closed
+relative-rotation path rather than accepting a winding label as input.
+
+As a purely geometric control, for two identical two-dimensional periodic
+lattices with relative rotation \(\theta\), the standard superperiod scale is
+
+\[
+\frac{L_{\mathrm{moire}}}{a}
+=
+\frac{1}{2\left|\sin(\theta/2)\right|}.
+\]
+
+This demonstrates how a small local angular mismatch can generate a much
+larger relational structure. The equation is included as a geometric control,
+not as evidence that the myth describes twisted lattice materials.
+
+In the current model notation the hierarchy is therefore
+
+\[
+\boxed{
+0_{\mathrm{ANU}}
+\;\leadsto\;
+(K_L,K_R)
+\;\xrightarrow{\Delta\theta}\;
+W
+\;\xrightarrow{}\;
+\text{higher relational structure}.
+}
+\]
+
+The falsification condition is direct: if an asserted winding cannot be
+reconstructed from a closed rotation/phase path, the model must not insert it
+by hand.
