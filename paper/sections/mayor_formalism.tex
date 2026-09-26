@@ -1,0 +1,113 @@
+\section{Mayor Formalism v0.1}
+
+Adrienne Mayor's research programme repeatedly compares natural, historical,
+material, or technological observations preserved in cultural narratives with
+evidence obtained through independent modern disciplines.  We formalize that
+method without assuming literal historicity or an invertible cultural channel.
+
+Let
+\[
+M=\mathcal{T}(E,C)
+\]
+denote a cultural representation $M$ generated from a source phenomenon $E$
+under transmission conditions $C$.  Version 0.1 makes no assumption that
+$\mathcal{T}$ is lossless, lossy, or invertible.
+
+Given independent evidence $X$ and competing hypotheses
+$\mathcal H=\{H_1,\ldots,H_n\}$, the reconstruction problem is
+\[
+(M,X)\longrightarrow\mathcal H,
+\]
+with hypotheses constrained by both evidence channels.
+
+\subsection{Typed relation signatures}
+
+Each source is mapped to normalized relations
+\[
+r=(s,k,t,o),
+\]
+where $s$ and $t$ are semantic roles, $k$ is a relation type, and $o$ is an
+optional order index.  For narrative graph $G_M$ and independent graph $G_X$,
+the retained invariants are
+\[
+I(M,X)=E(G_M)\cap E(G_X).
+\]
+
+A simple overlap diagnostic is
+\[
+J(G_M,G_X)
+=
+\frac{|E(G_M)\cap E(G_X)|}
+{|E(G_M)\cup E(G_X)|}.
+\]
+This is a structural score, not a probability of historical truth.
+
+\subsection{Specificity against controls}
+
+For preregistered negative controls $G_{C_i}$,
+\[
+\Delta_{\rm spec}
+=
+J(G_T,G_X)
+-
+\max_i J(G_{C_i},G_X).
+\]
+A positive margin indicates only specificity relative to the selected
+controls.
+
+\subsection{Research-domain projections}
+
+Geomythology is represented through structured event signatures containing
+location, chronology, process class, transformation sequence, observable
+effects, and material constraints.
+
+The Styx/Mavroneri programme is represented as a multi-channel constraint
+system
+\[
+D_{\rm Styx}
+=
+D_T\oplus D_G\oplus D_{\rm tox}\oplus D_H,
+\]
+for textual, geological, toxicological, and historical evidence.
+
+Artificial beings are represented as agent architectures
+\[
+\mathcal A=(B,S,A,G,C,V),
+\]
+for body/substrate, sensing, action, goal, creator/control relation, and
+vulnerability.
+
+Amazon/Scythian evidence is represented as a multiplex spatiotemporal graph
+\[
+G_A=(V,E,\lambda,\tau,\sigma),
+\]
+with independent textual, iconographic, archaeological, weapon, and
+osteological channels.
+
+Representation of extraordinary bodies can be treated as a mapping from
+coded visual/social features to a reception vector, while ancient
+self-medication reports can be represented by species--substance--behavior--
+context--outcome tuples.
+
+\subsection{Epistemic boundary}
+
+The shared pipeline is
+\[
+\boxed{
+\mathrm{representation}
+\to
+\mathrm{typed\ graph}
+\to
+\mathrm{independent\ graph}
+\to
+\mathrm{invariants}
+\to
+\mathrm{negative\ controls}
+\to
+\mathrm{constraints}.
+}
+\]
+
+A relation match does not establish causal transmission, historical identity,
+or a physical law.  No cosmological or fundamental-physics mechanism is
+assumed in Mayor Formalism v0.1.
