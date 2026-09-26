@@ -150,3 +150,56 @@ preregistered mappings, and null-model comparison.
 The previous project archive mentions a 143-statement Enuma formalization.
 The standalone 143-statement corpus was not recovered in the present
 provenance pass, so no 143/143 verification is claimed here.
+
+
+\subsection{Rotation-generated winding}
+
+The current geometric candidate introduces two relational projections
+$K_L,K_R$ around a common reference axis denoted $0_{\mathrm{ANU}}$ in the
+model notation.  The notation is formal and is not asserted to be a
+philological translation.
+
+Let
+\[
+K_R=R_{\theta}K_L.
+\]
+The invariant variable is the relative angle
+\[
+\Delta\theta
+=
+\theta_R-\theta_L
+\pmod{2\pi},
+\]
+which is unchanged by a common rigid rotation of both frames.
+
+For a closed path $\gamma$ in the relative-orientation field,
+\[
+\boxed{
+W_\gamma
+=
+\frac{1}{2\pi}
+\oint_\gamma d(\Delta\theta)
+}.
+\]
+Hence winding is treated as a derived closure invariant of accumulated
+geometric rotation, rather than as an independent primitive:
+\[
+\boxed{
+\mathrm{rotation}
+\longrightarrow
+\mathrm{relative\ phase}
+\longrightarrow
+\mathrm{winding}.
+}
+\]
+
+For two identical planar periodic lattices, a useful geometric control is
+\[
+\frac{L_{\mathrm{moire}}}{a}
+=
+\frac{1}
+{2\left|\sin(\Delta\theta/2)\right|},
+\]
+showing that a small relative rotation can induce a much larger relational
+superperiod.  This control is mathematical/physical background only and is
+not textual evidence for \emph{Enuma Elish}.
