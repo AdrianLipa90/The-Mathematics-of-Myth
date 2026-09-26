@@ -1,0 +1,187 @@
+{
+  "schema": "mythmath.enuma_relational_core/v1",
+  "work": "Enuma Elish",
+  "status": "CORE_WITNESS_SET",
+  "epistemic_layer": "TEXT",
+  "retrieved_utc": "2026-09-26",
+  "scope_note": "A provenance-controlled operator extraction for the relational-genesis formalization. It is not a replacement for a complete critical edition.",
+  "legacy_143": {
+    "historical_reference_present": true,
+    "standalone_143_statement_corpus_recovered": false,
+    "status": "REFERENCE_ONLY_NOT_REVERIFIED",
+    "rule": "Do not claim 143/143 correspondence until the original statement-level corpus is recovered and re-audited."
+  },
+  "sources": [
+    {
+      "id": "CDLI-P480701-I",
+      "tier": "PRIMARY_CANONICAL",
+      "description": "CDLI Literary 002718 composite, Tablet I",
+      "url": "https://cdli.earth/inscriptions/2258409"
+    },
+    {
+      "id": "ORACC-P338319-IV",
+      "tier": "PRIMARY_CANONICAL",
+      "description": "ORACC CAMS/GKAB STT 1,003, Enuma Elish IV",
+      "url": "https://oracc.museum.upenn.edu/cams/gkab/P338319/html"
+    },
+    {
+      "id": "ORACC-P338328-V",
+      "tier": "PRIMARY_CANONICAL",
+      "description": "ORACC CAMS/GKAB STT 1,012, Enuma Elish V",
+      "url": "https://oracc.museum.upenn.edu/cams/gkab/P338328/html"
+    },
+    {
+      "id": "ORACC-P338325-VI",
+      "tier": "PRIMARY_CANONICAL",
+      "description": "ORACC CAMS/GKAB STT 1,009, Enuma Elish VI",
+      "url": "https://oracc.museum.upenn.edu/cams/gkab/P338325/"
+    }
+  ],
+  "witnesses": [
+    {
+      "id": "EE-I-001-002",
+      "source": "CDLI-P480701-I",
+      "tablet": 1,
+      "lines": "1-2",
+      "text_claim": "Heaven and firm ground are represented before their naming.",
+      "formal_tags": ["UNNAMED_DOMAIN", "ZERO_CONSTRAINT"]
+    },
+    {
+      "id": "EE-I-003-005",
+      "source": "CDLI-P480701-I",
+      "tablet": 1,
+      "lines": "3-5",
+      "text_claim": "Apsu and Tiamat are primordial carriers whose waters are mingled.",
+      "formal_tags": ["PRIMORDIAL_CARRIERS", "RELATE", "MINGLED_WITH"]
+    },
+    {
+      "id": "EE-I-007-008",
+      "source": "CDLI-P480701-I",
+      "tablet": 1,
+      "lines": "7-8",
+      "text_claim": "The gods are not yet brought into being; naming and determination of destinies have not yet occurred.",
+      "formal_tags": ["ZERO_CONSTRAINT", "NO_GENERATED_ENTITIES", "NO_NAMING", "NO_DESTINY"]
+    },
+    {
+      "id": "EE-I-009-010",
+      "source": "CDLI-P480701-I",
+      "tablet": 1,
+      "lines": "9-10",
+      "text_claim": "Gods are formed; Lahmu and Lahamu are brought forth and explicitly called by name.",
+      "formal_tags": ["GENERATE", "NAME", "ZERO_EXIT"]
+    },
+    {
+      "id": "EE-I-012",
+      "source": "CDLI-P480701-I",
+      "tablet": 1,
+      "lines": "12",
+      "text_claim": "Anshar and Kishar are formed.",
+      "formal_tags": ["GENERATE", "DIFFERENTIATION"]
+    },
+    {
+      "id": "EE-I-014-016",
+      "source": "CDLI-P480701-I",
+      "tablet": 1,
+      "lines": "14-16",
+      "text_claim": "The lineage proceeds through Anu, who begets Nudimmud.",
+      "formal_tags": ["GENERATE", "LINEAGE", "ORDERED_SUCCESSION"]
+    },
+    {
+      "id": "EE-IV-063-065",
+      "source": "ORACC-P338319-IV",
+      "tablet": 4,
+      "lines": "63-65",
+      "text_claim": "Marduk divides Tiamat into two parts and establishes one half as the sky.",
+      "formal_tags": ["SEPARATE", "BOUNDARY_FORMATION", "COSMIC_ARCHITECTURE"]
+    },
+    {
+      "id": "EE-V-FRAGMENT-001",
+      "source": "ORACC-P338328-V",
+      "tablet": 5,
+      "lines": "fragmentary witness",
+      "text_claim": "The surviving witness attributes further spatial ordering, hydrological organization, rulership and construction to Marduk.",
+      "formal_tags": ["ASSIGN_FUNCTION", "ORDER", "STRUCTURE"],
+      "caution": "Fragmentary witness; do not infer missing Tablet V sequence from this record."
+    },
+    {
+      "id": "EE-VI-FRAGMENT-002-007",
+      "source": "ORACC-P338325-VI",
+      "tablet": 6,
+      "lines": "fragment 2'-7'",
+      "text_claim": "Humanity is present as a created class to which divine work is assigned; the gods are divided above and below.",
+      "formal_tags": ["GENERATE_CLASS", "ASSIGN_FUNCTION", "ROLE_ALLOCATION", "GLOBAL_PARTITION"],
+      "caution": "The preserved fragment is incomplete; material details not present in this witness are not encoded here."
+    }
+  ],
+  "formal_program": [
+    {
+      "operator_id": "EE.OP.001",
+      "kind": "GENERATE",
+      "inputs": ["Apsu", "Tiamat"],
+      "outputs": ["Lahmu", "Lahamu"],
+      "source_id": "EE-I-009-010"
+    },
+    {
+      "operator_id": "EE.OP.002",
+      "kind": "NAME",
+      "inputs": ["Lahmu"],
+      "outputs": [],
+      "source_id": "EE-I-009-010"
+    },
+    {
+      "operator_id": "EE.OP.003",
+      "kind": "NAME",
+      "inputs": ["Lahamu"],
+      "outputs": [],
+      "source_id": "EE-I-009-010"
+    },
+    {
+      "operator_id": "EE.OP.004",
+      "kind": "GENERATE",
+      "inputs": [],
+      "outputs": ["Anshar", "Kishar"],
+      "source_id": "EE-I-012"
+    },
+    {
+      "operator_id": "EE.OP.005",
+      "kind": "GENERATE",
+      "inputs": ["Anshar"],
+      "outputs": ["Anu"],
+      "source_id": "EE-I-014-015"
+    },
+    {
+      "operator_id": "EE.OP.006",
+      "kind": "GENERATE",
+      "inputs": ["Anu"],
+      "outputs": ["Nudimmud"],
+      "source_id": "EE-I-016"
+    },
+    {
+      "operator_id": "EE.OP.007",
+      "kind": "SEPARATE",
+      "inputs": ["Tiamat"],
+      "outputs": ["UpperCosmicRegion", "LowerCosmicRegion"],
+      "source_id": "EE-IV-063-065"
+    },
+    {
+      "operator_id": "EE.OP.008",
+      "kind": "GENERATE",
+      "inputs": [],
+      "outputs": ["Humanity"],
+      "source_id": "EE-VI-FRAGMENT-002-007"
+    },
+    {
+      "operator_id": "EE.OP.009",
+      "kind": "ASSIGN_FUNCTION",
+      "inputs": ["Humanity"],
+      "outputs": [],
+      "source_id": "EE-VI-FRAGMENT-002-007"
+    }
+  ],
+  "non_claims": [
+    "The operator graph does not prove that Enuma Elish encodes modern physics.",
+    "Relational zero is not identified with a physical vacuum or numerical zero.",
+    "Mythic names are not identified with particles, fields, hardware components or cosmological observables.",
+    "The historical 143-statement mapping is not reasserted as verified until its standalone corpus is recovered."
+  ]
+}
