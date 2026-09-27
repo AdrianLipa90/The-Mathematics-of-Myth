@@ -65,6 +65,45 @@ See:
 - `tests/test_enuma_relational.py`;
 - `paper/sections/enuma_relational_genesis.tex`.
 
+## Mayor Formalism v0.1
+
+A separate research branch formalizes the cross-disciplinary method visible in
+Adrienne Mayor's work without importing a prior physical theory into the
+sources.
+
+Core pipeline:
+
+\[
+\text{cultural representation}
+\rightarrow
+\text{typed relation graph}
+\rightarrow
+\text{independent evidence graph}
+\rightarrow
+\text{retained invariants}
+\rightarrow
+\text{negative controls}
+\rightarrow
+\text{hypothesis constraints}.
+\]
+
+Current domains: geomythology/*Mythopedia*, Styx toxicology, ancient artificial
+beings, Amazons/Scythia, extraordinary bodies, and ancient observations of
+animal self-medication.
+
+Files:
+
+- `src/mythmath/mayor_transform.py` — executable relation/invariant layer.
+- `tests/test_mayor_transform.py` — evidence-boundary and null-control tests.
+- `data/mayor_research_cases_v0_1.json` — current research/source registry.
+- `case_studies/MAYOR_FORMALISM_V0_1.md` — full derivation and falsification rules.
+- `paper/sections/mayor_formalism.tex` — paper section.
+
+The v0.1 model makes no assumption that cultural transmission is intrinsically
+lossy, granular, quantum, cosmological, or governed by any existing project
+physics. Those are separate hypotheses to test only after relation invariants
+have been extracted.
+
 ## Method
 
 Each comparison is processed in this order:

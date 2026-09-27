@@ -1,0 +1,160 @@
+{
+  "schema": "MAYOR_FORMALISM_V0_1",
+  "status": "FORMALIZATION_CANDIDATE",
+  "generated_on": "2026-09-26",
+  "core_rule": "Narrative structure and independent evidence are encoded separately; overlap constrains hypotheses but does not prove causal descent or literal truth.",
+  "sources": [
+    {
+      "id": "MAYOR-STANFORD-PROFILE",
+      "type": "official_profile",
+      "url": "https://classics.stanford.edu/people/adrienne-mayor",
+      "scope": "Mayor investigates natural knowledge in pre-scientific myths and oral traditions; folk-science precursors, alternatives, and parallels to modern scientific methods."
+    },
+    {
+      "id": "MAYOR-STANFORD-NEWSLETTER-2025",
+      "type": "official_department_newsletter",
+      "url": "https://classics.stanford.edu/sites/classics/files/media/file/stanford_classics_newsletter_2025.pdf",
+      "scope": "Current/recent projects include Mythopedia, animals that self-medicate, Baby Monsters and Centaur Families, Ancient History of AI, Scythia/Amazons, and Louvre Amazon exhibition planning."
+    },
+    {
+      "id": "MAYOR-STYX-2025",
+      "type": "peer_reviewed_open_access_article",
+      "url": "https://doi.org/10.1007/s12371-025-01138-w",
+      "scope": "Geomythological comparison of ancient Styx traditions with geology and toxicology; explicitly proposes three hypotheses and emphasizes that proof remains elusive."
+    },
+    {
+      "id": "MAYOR-MYTHOPEDIA-2025",
+      "type": "book_record",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9780691247878/html",
+      "scope": "2025 compendium of natural-history lore linking myths and legends with natural events and modern scientific context."
+    },
+    {
+      "id": "MAYOR-GEOMYTHS-2026",
+      "type": "author_interview",
+      "url": "https://podcasts.apple.com/us/podcast/adrienne-mayor-on-geomyths/id1223773992?i=1000763413275",
+      "scope": "2026 discussion of Mythopedia and geomyths, confirming the geomythology line remains active."
+    },
+    {
+      "id": "MAYOR-ANCIENT-AI-STANFORD",
+      "type": "official_publication_page",
+      "url": "https://classics.stanford.edu/publications/artificial-intelligence-wake-call-ancient-greece",
+      "scope": "Ancient myths of artificial life and technology used to examine goals, control, autonomy, and unintended consequences."
+    },
+    {
+      "id": "MAYOR-AMAZONS-STANFORD",
+      "type": "official_publication_page",
+      "url": "https://classics.stanford.edu/publications/amazons-lives-legends-warrior-women-across-ancient-world",
+      "scope": "Combines classical myth and art, nomad traditions, and archaeology in studying historical warrior women and Amazon traditions."
+    },
+    {
+      "id": "MAYOR-BABY-MONSTERS-2026",
+      "type": "book_chapter_record",
+      "url": "https://www.routledge.com/Extraordinary-Bodies-on-Display-Humans-Animals-and-Cryptids-from-Antiquity-to-the-Present/Draycott/p/book/9781032827582",
+      "scope": "2026 chapter on humanizing mythic creatures and extraordinary beings through artistic representation."
+    }
+  ],
+  "cases": [
+    {
+      "id": "MYTHOPEDIA_GEOMYTHS",
+      "status": "ACTIVE_2026",
+      "sources": [
+        "MAYOR-STANFORD-PROFILE",
+        "MAYOR-MYTHOPEDIA-2025",
+        "MAYOR-GEOMYTHS-2026"
+      ],
+      "mathematical_target": "Recover relation invariants between narrative descriptions of natural events and independently characterized geological or biological phenomena.",
+      "evidence_channels": [
+        "NARRATIVE",
+        "GEOLOGICAL",
+        "MODERN_SCIENCE"
+      ],
+      "null_model": "Unrelated narratives matched after identical role normalization."
+    },
+    {
+      "id": "STYX_TOXICOLOGY",
+      "status": "PUBLISHED_2025_ACTIVE_TEST_PROGRAM",
+      "sources": [
+        "MAYOR-STYX-2025"
+      ],
+      "mathematical_target": "Evaluate explicit competing hypotheses under textual, geological, toxicological, and chronological constraints.",
+      "evidence_channels": [
+        "TEXTUAL",
+        "GEOLOGICAL",
+        "TOXICOLOGICAL",
+        "HISTORICAL"
+      ],
+      "hypotheses": [
+        "A toxic calicheamicin-producing bacterium and/or toxic lichen could have been present in the Styx/Mavroneri region in antiquity.",
+        "Effects of a naturally occurring toxic substance could have been observed and retained in ancient tradition.",
+        "The resulting reputation could explain why Styx poison was considered a plausible cause in traditions about Alexander's death."
+      ],
+      "caution": "The source article explicitly states that proof is elusive and current chemical testing cannot establish ancient presence by itself."
+    },
+    {
+      "id": "ANCIENT_AI",
+      "status": "ONGOING_PUBLIC_RESEARCH",
+      "sources": [
+        "MAYOR-STANFORD-NEWSLETTER-2025",
+        "MAYOR-ANCIENT-AI-STANFORD"
+      ],
+      "mathematical_target": "Represent artificial beings as agent architectures and compare substrate, sensing, actuation, goals, creator-control relations, autonomy, and failure modes without calling analogy identity.",
+      "evidence_channels": [
+        "TEXTUAL",
+        "ICONOGRAPHIC",
+        "HISTORICAL"
+      ],
+      "null_model": "Generic heroic or magical beings lacking artificial-construction and control relations."
+    },
+    {
+      "id": "AMAZONS_SCYTHIA",
+      "status": "ONGOING_PUBLIC_RESEARCH",
+      "sources": [
+        "MAYOR-STANFORD-NEWSLETTER-2025",
+        "MAYOR-AMAZONS-STANFORD"
+      ],
+      "mathematical_target": "Construct a spatiotemporal evidence graph linking texts, images, burials, weapons, sex estimation, geography, and chronology while keeping material evidence independent from literary expectation.",
+      "evidence_channels": [
+        "TEXTUAL",
+        "ARCHAEOLOGICAL",
+        "ICONOGRAPHIC",
+        "HISTORICAL"
+      ],
+      "null_model": "Comparable warrior burials and narratives outside the proposed transmission/geographic structure."
+    },
+    {
+      "id": "EXTRAORDINARY_BODIES",
+      "status": "PUBLISHED_2026",
+      "sources": [
+        "MAYOR-STANFORD-NEWSLETTER-2025",
+        "MAYOR-BABY-MONSTERS-2026"
+      ],
+      "mathematical_target": "Model how visual features and social context shift reception across fear, disgust, awe, curiosity, sympathy, and empathy.",
+      "evidence_channels": [
+        "ICONOGRAPHIC",
+        "TEXTUAL",
+        "HISTORICAL"
+      ],
+      "null_model": "Matched images lacking infant/family/nurturing cues."
+    },
+    {
+      "id": "ANIMAL_SELF_MEDICATION",
+      "status": "RECENT_RESEARCH_LINE",
+      "sources": [
+        "MAYOR-STANFORD-NEWSLETTER-2025"
+      ],
+      "mathematical_target": "Compare ancient behavioral reports with modern zoological observations using species, plant/substance, behavior, context, and outcome relations.",
+      "evidence_channels": [
+        "TEXTUAL",
+        "ZOOLOGICAL",
+        "MODERN_SCIENCE"
+      ],
+      "null_model": "Ancient animal lore without behaviorally specific medicinal-use relations."
+    }
+  ],
+  "preregistered_metrics": {
+    "relation_overlap": "Jaccard on exact normalized RelationSignature objects.",
+    "retained_invariants": "Exact normalized relations present in both narrative and independent graphs.",
+    "specificity_margin": "Target overlap minus strongest preregistered negative-control overlap.",
+    "rule": "No score is interpreted as proof of historical causation."
+  }
+}
